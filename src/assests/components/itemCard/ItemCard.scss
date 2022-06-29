@@ -1,0 +1,82 @@
+.item-card{
+    width: 250px;
+    height: fit-content;
+    // max-height:450px;
+    border-radius: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 10px;
+    color: rgb(65, 65, 65);
+    box-shadow: 1px 1px 10px 1px rgba(131, 131, 131,0.3);
+    font-weight: bold;
+    display: list-item;
+    list-style: none;
+    .img-div{
+        img{
+            width: 100%;
+        }
+    }
+    .item-details{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px 0 0;
+        .left{  
+            text-align: left;
+            padding-left: 15px;
+            box-sizing: border-box;
+            width: 80%;
+            .item-name{
+                letter-spacing: 2px;
+                margin: 0;
+                padding: 0;
+                font-size: 17px;
+                text-transform: capitalize;
+            }
+            .seller-name{
+                color: gray;
+                margin: 0;
+                padding: 0;
+                font-weight: normal;
+                font-size: 14px;
+            }
+            .item-decription{
+                    color: gray;
+                    font-weight: 400;
+            }
+            .item-price{
+                color: gray;
+                font-size: 15px;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .right{
+            
+            box-sizing: border-box;
+            #heart-icon{
+                color: orange;
+                font-weight: bold;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .item-card-footer{
+        padding: 10px 0 10px 15px;
+        text-align: left;
+        #add-cart-bt{
+            border: none;
+            background-color: rgb(57, 57, 57);
+            color: white;
+            padding: 5px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

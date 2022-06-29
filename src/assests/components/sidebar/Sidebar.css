@@ -1,0 +1,51 @@
+.sidebar {
+  padding: 10px 15px;
+  padding-left: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+.sidebar .logo {
+  text-align: left;
+  font-size: 25px;
+}
+
+.sidebar .main-title {
+  text-align: left;
+  color: gray;
+  font-weight: 500;
+  border-bottom: 1px solid #c9c9c9;
+  padding: 10px 0;
+  margin: 5px 0;
+}
+
+.sidebar .sidebar-items, .sidebar .category {
+  border-bottom: 1px solid #c9c9c9;
+  padding: 10px 0;
+  margin: 5px 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.sidebar .sidebar-items:hover, .sidebar .category:hover {
+  cursor: pointer;
+}
+
+.sidebar .categories-div {
+  text-align: left;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sidebar .categories-div #each-category {
+  margin: 10px 0;
+}
+
+.sidebar .categories-div #each-category .item {
+  font-size: 15px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=Sidebar.css.map */

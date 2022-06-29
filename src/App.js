@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
+import { Home } from './assests/pages/home/Home';
+import { Vendor } from './assests/pages/vendor/Vendor';
+import { Header } from './assests/components/header/Header';
+import { Wishlist } from './assests/pages/wishlist/Wishlist'
+import { Cart } from './assests/pages/cart/Cart'
+import { Sidebar } from './assests/components/sidebar/Sidebar';
+import { ProductPage } from './assests/pages/productPage/ProductPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Router>
+          <Header />
+      <div className='main'>
+      <div className='side'>
+          <Sidebar />
+      </div>
+      <div className='other'>
+            <Routes>
+                <Route path='/' exact element={<Home />}/>
+                <Route path='my-wishlist' exact element={<Wishlist />}/>
+                <Route path='cart' exact element={<Cart />} />
+                <Route path='/product/:id' exact element={<ProductPage />} />
+                <Route path='/sell-your-item' exact element={<Vendor />}/>
+            </Routes>
+      </div>
+          </div>
+        </Router>
     </div>
   );
 }

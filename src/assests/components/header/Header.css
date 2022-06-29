@@ -1,0 +1,70 @@
+.header {
+  padding: 15px;
+  background-color: #22252A;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .offer-div .offer-text {
+  margin: 0;
+}
+
+.header .links-div a {
+  font-size: 17px;
+  margin: 0 20px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+.header .links-div a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  -webkit-text-decoration-color: #ECECEA;
+          text-decoration-color: #ECECEA;
+  text-decoration-thickness: 3px;
+}
+
+.header .links-div .wishist-link {
+  position: relative;
+  z-index: 5;
+}
+
+.header .links-div .wishist-link .wishlist-length {
+  position: absolute;
+  top: -10px;
+  z-index: 1;
+  right: -17px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 3px 7px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.header .links-div .cart-link {
+  position: relative;
+  z-index: 5;
+}
+
+.header .links-div .cart-link .cart-length {
+  position: absolute;
+  top: -10px;
+  z-index: 1;
+  right: -17px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 2px 7px;
+  border-radius: 50%;
+  background-color: red;
+}
+/*# sourceMappingURL=Header.css.map */
