@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { AddProfile } from '../../components/addProfile/AddProfile'
 import { DeletedProducts } from '../../components/deletedProducts/DeletedProducts'
 import { ProductsTable } from '../../components/productsTable/ProductsTable'
+import { Link } from 'react-router-dom'
 import './Seller.css'
 
 export const Seller = () => {
@@ -11,6 +12,10 @@ export const Seller = () => {
     const [showDeleted, setShowDeleted] = useState(false)
 
     const userProfile = useSelector(state => state.seller)
+    const deletedProducts = useSelector(state => state.deleteProducts)
+    const products = useSelector(state => state.products)
+
+    console.log(deletedProducts);
     const dispatch = useDispatch()
 
     const clearAllItems = () => {
@@ -45,18 +50,21 @@ export const Seller = () => {
                                 </div>
                                 :<div className="seller-items">
                                     <div className="items-status">
-                                        <div className="tgle-bt">
-                                            <input type="checkbox" id='status-change' onClick={() => setShowDeleted(!showDeleted)}/>
-                                            <label htmlFor="status-change" id='ch-lb'>Active / Deleted</label>
-                                        </div>
-                                        {showDeleted &&
-                                        <div className="clear-dt-itms">
-                                            <button className="clear-all" onClick={ clearAllItems }>Clear All</button>
-                                        </div>}
+                                            <div className="tgle-bt">
+                                                <input type="checkbox" id='status-change' onClick={() => setShowDeleted(!showDeleted)}/>
+                                                <label htmlFor="status-change" id='ch-lb'>Active / Deleted</label>
+                                            </div>
+                                            {showDeleted &&
+                                            <div className="clear-dt-itms">
+                                                {deletedProducts.length > 0&& <button className="clear-all" onClick={ clearAllItems }>Clear All</button>}
+                                            </div>}
                                     </div>
                                     {showDeleted ?  
-                                    <div id='deleted-products-div'> <DeletedProducts /></div>:
-                                    <div id='active-item-list'><ProductsTable /> </div>
+                                    <div id='deleted-products-div'> {deletedProducts.length > 0? <DeletedProducts />:
+                                    <p id='empt-dt-txt'>Nothing to show here, once you delete and item, it's appear here !</p>}
+                                    </div>:
+                                    <div id='active-item-list'>{ products.length >0 ? <ProductsTable /> :
+                                    <p id='empt-dt-txt'>Currently nothing to show here. Start adding Products from <Link to='/sell-your-item'>Sell</Link> section, then you see your listed Products here !</p>} </div>
                                         }
                                 </div>}
                         </div>

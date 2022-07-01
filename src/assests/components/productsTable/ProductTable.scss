@@ -39,6 +39,13 @@
                 :nth-child(1){
                     text-align: center;
                 }
+                :nth-child(4){
+                    width: 8%;
+                }
+                #size-select{
+                    width: fit-content;
+                    border: 1px solid rgb(182, 182, 182);
+                }
                 td{
                     box-sizing: border-box;
                     padding: 10px 0;

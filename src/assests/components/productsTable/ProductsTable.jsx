@@ -36,7 +36,13 @@ export const ProductsTable = () => {
                                                         <td>{i+1}</td>
                                                         <td>{ product.pTitle }</td>
                                                         <td>{ product.pDescription}</td>
-                                                        <td>{ product.pSize }</td>
+                                                        <td>
+                                                            { product.pSizes && 
+                                                            <select name="" id="size-select">
+                                                                <option value="" disabled>Sizes</option>
+                                                            { product.pSizes.map((size, i)=> <option key={i}>{ size }</option>)}
+                                                            </select>}
+                                                            </td>
                                                         <td>{ product.pQty }</td>
                                                         <td><span >{ product.pPrice }</span>
                                                         <span id='icons-div'>

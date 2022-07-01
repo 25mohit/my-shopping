@@ -187,4 +187,24 @@
 .seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt input:checked[type=checkbox]::before {
   left: 35px;
 }
+
+.seller .seller-container .seller-hero .hero-container .seller-items #empt-dt-txt {
+  margin-top: 60px;
+  font-size: 20px;
+  color: #737373;
+  font-weight: bold;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items #empt-dt-txt a {
+  text-decoration: none;
+  color: black;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items #empt-dt-txt a:hover {
+  text-underline-offset: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  -webkit-text-decoration-color: #03a9f4;
+          text-decoration-color: #03a9f4;
+}
 /*# sourceMappingURL=Seller.css.map */

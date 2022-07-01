@@ -7,9 +7,15 @@
   height: 100%;
   min-height: 100vh;
 }
-.App .main .side{
+.App .main .show{
   flex: 1;
 }
+
 .App .main .other{
   flex: 5;
+}
+
+.App .main .hide{
+  flex: 1;
+  display: none;
 }
