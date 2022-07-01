@@ -1,0 +1,61 @@
+.message-div {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.message-div .message-container {
+  width: 400px;
+  border: 1px solid #b8b8b8;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.message-div .message-container .message-head {
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.message-div .message-container .message-head .message-text {
+  line-height: 30px;
+  color: #2d2c2c;
+  font-size: 18px;
+}
+
+.message-div .message-container .footer-message {
+  text-align: center;
+}
+
+.message-div .message-container .footer-message .message-cl-bt {
+  border: none;
+  border-radius: 5px;
+  background-color: #01ae01;
+  font-weight: bold;
+  color: white;
+  font-size: 17px;
+  padding: 7px 40px;
+}
+
+.message-div .message-container .footer-message .message-cl-bt:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Message.css.map */

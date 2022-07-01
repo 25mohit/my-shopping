@@ -1,0 +1,44 @@
+.message-div{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+        .message-container{
+            width: 400px;
+            border: 1px solid rgb(184, 184, 184);
+            height: fit-content;
+            padding: 15px;
+            background-color: white;
+            box-sizing: border-box;
+            border-radius: 10px;
+            text-align: left;
+                .message-head{
+                    padding-left: 15px;
+                    box-sizing: border-box;
+                        .message-text{
+                            line-height: 30px;
+                            color: rgb(45, 44, 44);
+                            font-size: 18px;
+                        }
+                }
+                .footer-message{
+                    text-align: center;
+                        .message-cl-bt{
+                                border: none;
+                                border-radius: 5px;
+                                background-color: rgb(1, 174, 1);
+                                font-weight: bold;
+                                color: white;
+                                font-size: 17px;
+                                padding: 7px 40px;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                        }
+                }
+        }
+}
