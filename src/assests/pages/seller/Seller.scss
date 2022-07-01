@@ -1,0 +1,130 @@
+.seller{
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background-color: white;
+    height: 100%;
+        .seller-container{
+            .seller-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .seller-head{
+                    color: rgb(30, 30, 30);
+                }
+                .add-profile-bt{
+                    border: none;
+                    color: white;
+                    padding: 4px 12px;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    background-color: green;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .seller-hero{
+                .toogle-bar{
+                    display: flex;
+                    margin-top: 20px;
+                    button{
+                        border: none;
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding: 10px ;
+                        color: rgb(46, 46, 46);
+                    }
+                        .toogle-bt-left{
+                            width: 50%;
+                            border: 0.5px solid rgb(196, 196, 196);
+                            border-radius: 10px 0 0 10px;
+                            background-color: white;
+                        }
+                        .toogle-bt-right{
+                            width: 50%;
+                            border-radius: 0 10px 10px 0;
+                            color: white;
+                            background-color: rgb(178, 178, 178);
+                        }
+                }
+                .hero-container{
+                    .seller-profile{
+                        padding: 20px;
+                        box-sizing: border-box;
+                        text-align: left;
+                        .seller-info{
+                            color: black;
+                            font-weight: bold;
+                            line-height: 30px;
+                            font-size: 18px;
+                            .dt{
+                                font-weight: normal;
+                                margin-right: 15px;
+                            }
+                        }
+                        .profile-footer{
+                            margin-top: 35px;
+                            color: gray;
+                        }
+                    }
+                    .seller-items{
+                        .items-status{
+                            margin: 15px 0;
+                            width: fit-content;
+                            display: flex;
+                            align-items: center;
+                            #ch-lb{
+                                color: gray;
+                                user-select: none;
+                                font-weight: bold;
+                                margin: 0;
+                                padding: 0;
+                                &:hover{
+                                    cursor: pointer;
+                                    color: #03a9f4;
+                                    transition: 0.7s;
+                                }
+                            }
+                            input[type=checkbox]{
+                                // accent-color: orange;
+                                margin-right: 15px;
+                                    outline: none;
+                                    width: 60px;
+                                    height: 25px;
+                                    position: relative;
+                                    -webkit-appearance: none;
+                                    background: #c6c6c6;
+                                    border-radius: 20px;
+                                    box-shadow: inset 0 0 5px rgba(0,0,0,.3);
+                                    transition: .5s;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                            }
+                            input:checked[type=checkbox]{
+                                background: #03a9f4;
+                            }
+                            input[type=checkbox]::before{
+                                content: '';
+                                position: absolute;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                top: 0;
+                                left: 0;
+                                background: #fff;
+                                transform: scale(1.1);
+                                box-shadow: 0 2px 5px rgba(0,0,0,.2);
+                                transition: 0.3s;
+                            }
+                            input:checked[type=checkbox]::before{
+                                left: 35px;
+                            }
+                        }
+                        // #active-item-list{
+                        // }
+                    }
+                }
+            }
+        }
+}

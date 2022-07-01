@@ -1,0 +1,52 @@
+.deleted-prod {
+  border-radius: 10px;
+  border: 1px solid #cecdcd;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.deleted-prod table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.deleted-prod table #tr-hd {
+  text-align: left;
+  background-color: #ff1e1e;
+  color: white;
+}
+
+.deleted-prod table #tr-hd :nth-child(1) {
+  text-align: center;
+  width: 10%;
+}
+
+.deleted-prod table #tr-hd :nth-child(2) {
+  width: 30%;
+}
+
+.deleted-prod table #tr-hd :nth-child(3) {
+  width: 25%;
+}
+
+.deleted-prod table #tr-hd :nth-child(6) {
+  width: 15%;
+}
+
+.deleted-prod table #tr-hd th {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.deleted-prod table tbody tr :nth-child(1) {
+  text-align: center;
+}
+
+.deleted-prod table tbody tr td {
+  text-align: left;
+}
+/*# sourceMappingURL=DeletedProducts.css.map */

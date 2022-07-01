@@ -17,8 +17,17 @@
         padding: 10px 0;
         margin: 5px 0;
     }
-    .sidebar-items,.category{
+    .sidebar-items{
         border-bottom: 1px solid rgb(201, 201, 201);
+        padding: 10px 0;
+        margin: 5px 0;
+        font-weight: 500;
+        text-align: left;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .category{
         padding: 10px 0;
         margin: 5px 0;
         font-weight: 500;

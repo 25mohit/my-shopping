@@ -9,7 +9,6 @@ export const Products = () => {
     return(
         <div className="products">
             <div className="product-container">
-
                 {
                     items.map(item => <ItemCard key={ item.id } data={ item }/>)
                 }

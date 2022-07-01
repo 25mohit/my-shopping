@@ -1,0 +1,76 @@
+.add-profile{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10,10,10,0.2);
+    // backdrop-filter: blur(3px);
+    .add-profile-container{
+        width: 35%;
+        height: fit-content;
+        // max-height: 85%;
+        background-color: white;
+        border-radius: 10px;
+        padding:20px;
+        box-sizing: border-box;
+        .ad-pr-head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+                .up-pr{
+                    font-size: 25px;
+                }
+                #md-cl-bt{
+                    background-color: black;
+                    color: white;
+                    font-weight: bold;
+                }
+        }
+        .center-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .update-profile{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin-bottom: 15px;
+                #lable{
+                        margin: 5px 0;
+                        margin-top: 20px;
+                }
+                #input-field{
+                        border: 1px solid rgb(198, 198, 198);
+                        border-radius: 5px;
+                        font-size: 17px;
+                        padding: 5px ;
+                        outline: none;
+                        &:focus{
+                            border: 1px solid red;
+                            outline: 3px solid rgba(255, 168, 6,0.7);
+                        }
+                }
+                #add{
+                    margin-top: 15px;
+                    border: none;
+                    font-size: 20px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    color: rgb(62, 62, 62);
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgb(26, 182, 26);
+                        color: white;
+                        transition: 0.6s;
+                    }
+                }
+            }
+        }
+    }
+}

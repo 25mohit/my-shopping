@@ -1,12 +1,31 @@
 import './Header.css'
 import { useSelector } from 'react-redux/es/hooks/useSelector'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { Nav, Badge, Dropdown } from 'react-bootstrap'
+import {BsCartCheckFill} from 'react-icons/bs'
+import {BsTrash} from 'react-icons/bs'
+import { useDispatch } from 'react-redux'
+import { useEffect, useState } from 'react'
 
 export const Header = () => {
     const cart = useSelector(state => state.cart)
     const wishlist = useSelector(state => state.wishlist)
 
-    console.log(cart);
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    
+    const removeFromDropDown = (id) => {
+        dispatch({
+            type:'REMOVE_FROM_CART',
+            payload:id
+        })
+    }
+    
+    const clearCart = () => {
+        dispatch({
+            type:'CLEAR_CART',
+        })
+    }
     return(
         <div className="header">
             <div className="offer-div">
@@ -18,9 +37,35 @@ export const Header = () => {
                 <Link to='/my-wishlist' className='wishist-link'>Wishlist
                        {wishlist.length > 0 && <span className='wishlist-length'>{ wishlist.length }</span>}
                 </Link>
-                <Link to='/cart' className='cart-link'>Cart 
+                {/* <Link to='/cart' className='cart-link'>Cart 
                 { cart.length > 0 && <span className="cart-length">{ cart.length }</span>}
-                </Link>
+                </Link> */}
+                <Nav id='dropdown-cart'>
+                    <Dropdown alignRight>
+                        <Dropdown.Toggle variant="success">
+                            <BsCartCheckFill color='white' fontSize="25px" />
+                            <Badge color='red'>{cart.length}</Badge>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu style={{ minWidth:370}} id='menu-items'>
+                            {cart.length>0 ?(
+                                <>
+                                {cart.map(item => <div id='map-div' key={item.id}>
+                                   <p id='m-name'>{item.pTitle}</p> 
+                                   <div className="footer-div-map">
+                                        <p id='m-price'>Rs {item.pPrice.split(".")[0]}</p> 
+                                        <p id='m-bt'><BsTrash onClick={ () => removeFromDropDown(item.id) }/></p>
+                                   </div>
+                                    </div>)}
+                                </>
+                            ) : (<span style={{ padding:10}}>Cart is Empty!</span>)}
+                            
+                    <div className="drop-footer">
+                        <button id='to-cart' onClick={() =>navigate('cart')}>To Cart</button>
+                        <button id='clear-cart' onClick={ clearCart }>Clear Cart</button>
+                    </div>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Nav>
             </div>
         </div>
     )

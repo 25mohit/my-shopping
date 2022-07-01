@@ -1,0 +1,113 @@
+.add-profile {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
+.add-profile .add-profile-container {
+  width: 35%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.add-profile .add-profile-container .ad-pr-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.add-profile .add-profile-container .ad-pr-head .up-pr {
+  font-size: 25px;
+}
+
+.add-profile .add-profile-container .ad-pr-head #md-cl-bt {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.add-profile .add-profile-container .center-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-profile .add-profile-container .center-form .update-profile {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.add-profile .add-profile-container .center-form .update-profile #lable {
+  margin: 5px 0;
+  margin-top: 20px;
+}
+
+.add-profile .add-profile-container .center-form .update-profile #input-field {
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 5px;
+  outline: none;
+}
+
+.add-profile .add-profile-container .center-form .update-profile #input-field:focus {
+  border: 1px solid red;
+  outline: 3px solid rgba(255, 168, 6, 0.7);
+}
+
+.add-profile .add-profile-container .center-form .update-profile #add {
+  margin-top: 15px;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #3e3e3e;
+}
+
+.add-profile .add-profile-container .center-form .update-profile #add:hover {
+  cursor: pointer;
+  background-color: #1ab61a;
+  color: white;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+/*# sourceMappingURL=AddProfile.css.map */

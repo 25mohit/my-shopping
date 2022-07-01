@@ -1,32 +1,104 @@
 .vendor-div {
   width: 100%;
+  height: 80%;
+  display: list-item;
+  list-style: none;
+}
+
+.vendor-div .seller-heading {
+  font-size: 50px;
+}
+
+.vendor-div .seller-heading span {
+  font-size: 30px;
+}
+
+.vendor-div .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100%;
 }
 
-.vendor-div .vendor-form {
+.vendor-div .form .vendor-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 60%;
+  padding: 0 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.vendor-div .vendor-form .product-sizes {
+.vendor-div .form .vendor-form .input-field {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.vendor-div .form .vendor-form .input-field:focus {
+  border: 1px solid red;
+  outline: 3px solid rgba(255, 168, 6, 0.7);
+}
+
+.vendor-div .form .vendor-form .input-field::-webkit-input-placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.vendor-div .form .vendor-form .input-field:-ms-input-placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.vendor-div .form .vendor-form .input-field::-ms-input-placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.vendor-div .form .vendor-form .input-field::placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.vendor-div .form .vendor-form .product-sizes {
+  text-align: left;
   margin: 15px 0;
 }
 
-.vendor-div .vendor-form input[type=text] {
-  padding: 10px;
+.vendor-div .form .vendor-form .product-sizes .checkbox {
+  margin-right: 10px;
+}
+
+.vendor-div .form .vendor-form .product-sizes #label-vendor {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.vendor-div .form .vendor-form #submit-bt {
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: orange;
+  border: 0.5px solid #ff4949;
+}
+
+.vendor-div .form .vendor-form #submit-bt:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=Vendor.css.map */

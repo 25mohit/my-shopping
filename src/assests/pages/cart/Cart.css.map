@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,gBAAgB,EAAE,KAAK;CAC1B",
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;CACpB",
     "sources": [
         "Cart.scss"
     ],

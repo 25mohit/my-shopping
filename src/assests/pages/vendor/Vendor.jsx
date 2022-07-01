@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import './Vendor.css'
 
 export const Vendor = () => {
@@ -7,9 +7,13 @@ export const Vendor = () => {
     const [pCategory, setPCategory] = useState('')
     const [pSizes, setPSizes] = useState([])
     const [pPrice, setPPrice] = useState()
+    const [pQty, setPQty] = useState('')
     const [pDescription, setPDescription] = useState('')
 
     const dispatch = useDispatch()
+
+    const products = useSelector(state => state.products)
+    console.log(products);
 
     const submitProduct = (e) => {
         e.preventDefault()
@@ -17,17 +21,25 @@ export const Vendor = () => {
             type: "SELL_PRODUCT",
             payload:{
                 id: new Date().getTime(),
-                pTitle, pCategory, pSizes, pPrice, pDescription
+                pTitle, pCategory, pSizes, pPrice, pQty, pDescription
             }
         })
         alert('Added !')
     }
     return(
         <div className="vendor-div">
-                <form action="submit" className='vendor-form'>
-                    <input type="text" placeholder='Product Title' value={pTitle} onChange={ e => setPTitle(e.target.value)}/>
-                    <select name="" id="" value={pCategory} onChange={ e => setPCategory(e.target.value)}>
-                        <option value="">Select</option>
+                    <h1 className="seller-heading">Sell your Product here ! <span>with just one click..</span></h1>
+                <div className='form'>
+                    <form action="" className='vendor-form'>
+                    <input type="text" className='input-field' placeholder='Product Title' value={pTitle} onChange={ e => setPTitle(e.target.value)}/>
+                    <select name="" id="" className='input-field' value={pQty} onChange={e => setPQty(e.target.value)}>
+                        <option value='' disabled>Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select  className='input-field' value={pCategory} onChange={ e => setPCategory(e.target.value)}>
+                        <option value="" disabled>Select</option>
                         <option value="tv , electronics">TV, Appliances, Electronics</option>
                         <option value="mobiles , computers">Mobiles, Computers</option>
                         <option value="men Clothing">Men's Fashion</option>
@@ -38,18 +50,26 @@ export const Vendor = () => {
                         <option value="books">Books</option>
                         <option value="baby products , toys">Baby Products, Toys</option>
                     </select>
+                    {(pCategory=='women Clothing' || pCategory=='men Clothing') && 
                     <div className="product-sizes">
-                            <input type="checkbox" id='lSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'L']: pSizes.filter(i => i !== 'L'))}/>
-                            <label htmlFor="lSize">L</label>
-                            <input type="checkbox" id='xlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'XL']: pSizes.filter(i => i !== 'XL'))}/>
-                            <label htmlFor="xlSize">XL</label>
-                            <input type="checkbox" id='mSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'M']: pSizes.filter(i => i !== 'M'))}/>
-                            <label htmlFor="mSize">M</label>
-                    </div>
-                    <input type="text" placeholder='Product Price' value={pPrice} onChange={ e => setPPrice(e.target.value)}/>
-                    <input type="text" placeholder='Decription' value={pDescription} onChange={ e => setPDescription(e.target.value)}/>
-                    <button onClick={ submitProduct }>SUBMIT</button>
-                </form>
+                            <input className='checkbox' type="checkbox" id='sSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'S']: pSizes.filter(i => i !== 'S'))}/>
+                            <label id='label-vendor' htmlFor="sSize">S</label>
+                            <input className='checkbox' type="checkbox" id='mSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'M']: pSizes.filter(i => i !== 'M'))}/>
+                            <label id='label-vendor' htmlFor="mSize">M</label>
+                            <input className='checkbox' type="checkbox" id='lSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'L']: pSizes.filter(i => i !== 'L'))}/>
+                            <label id='label-vendor' htmlFor="lSize">L</label>
+                            <input className='checkbox' type="checkbox" id='xlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'XL']: pSizes.filter(i => i !== 'XL'))}/>
+                            <label id='label-vendor' htmlFor="xlSize">XL</label>
+                            <input className='checkbox' type="checkbox" id='xxlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'XXL']: pSizes.filter(i => i !== 'XXL'))}/>
+                            <label id='label-vendor' htmlFor="xxlSize">XXL</label>
+                            <input className='checkbox' type="checkbox" id='xxxlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'M']: pSizes.filter(i => i !== 'M'))}/>
+                            <label id='label-vendor' htmlFor="xxxlSize">XXXL</label>
+                    </div>}
+                    <input type="text" className='input-field' placeholder='Product Price' value={pPrice} onChange={ e => setPPrice(e.target.value)}/>
+                    <input type="text" className='input-field' placeholder='Decription' value={pDescription} onChange={ e => setPDescription(e.target.value)}/>
+                    <button id='submit-bt' onClick={ submitProduct }>SUBMIT</button>
+                    </form>
+                </div>
         </div>
     )
 }

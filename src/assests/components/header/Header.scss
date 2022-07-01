@@ -13,6 +13,8 @@
         }
     }
     .links-div{
+        display: flex;
+        align-items: center;
         a{
             font-size: 17px;
             margin:0 20px;
@@ -26,9 +28,69 @@
                 text-decoration-thickness: 3px;
             }
         }
+    #dropdown-cart{
+        width: fit-content;
+        .drop-footer{
+            display: flex;
+            justify-content: space-between;
+            button{
+                border: none;
+                font-size: 17px;
+                font-weight: bold;
+                padding: 5px 10px;
+                color: white;
+                border-radius: 5px;
+            }
+            #to-cart{
+                background-color: green;
+                width: 45%;
+            }
+            #clear-cart{
+                background-color: red;
+                width: 45%;
+            }
+        }
+    }
+    #menu-items{
+        padding: 5px 10px;
+        box-sizing: border-box;
+        max-height: 300px;
+        overflow: auto;
+        margin: 5px;
+        #map-div{
+            background-color: rgb(228, 227, 227);
+            margin: 10px 0;
+            padding: 5px 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            display: list-item;
+            #m-name{
+                color: black;
+                font-size: 15px;
+                margin: 0;
+                font-weight: 500;
+            }
+            .footer-div-map{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                #m-price{
+                    margin: 0;
+                }
+            }
+            #m-bt{
+                font-size: 20px;
+                color: red;
+            }
+            &:hover{
+                cursor: pointer;
+                box-shadow: 1px 1px 5px 1px gray;
+                transition: 0.6s;
+            }
+        }
+    }
         .wishist-link{
             position: relative;
-            z-index: 5;
             .wishlist-length{
                 position: absolute;
                 top: -10px;

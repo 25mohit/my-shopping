@@ -1,0 +1,65 @@
+.confirm-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
+.confirm-delete .confirm-delete-container {
+  width: 35%;
+  background-color: white;
+  border-radius: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+}
+
+.confirm-delete .confirm-delete-container .delete-header .d-head {
+  font-size: 25px;
+}
+
+.confirm-delete .confirm-delete-container .delete-info {
+  margin: 15px 0;
+}
+
+.confirm-delete .confirm-delete-container .delete-footer {
+  text-align: right;
+}
+
+.confirm-delete .confirm-delete-container .delete-footer button {
+  margin: 0 10px;
+  border: none;
+  padding: 7px 15px;
+  font-size: 17px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.confirm-delete .confirm-delete-container .delete-footer button:hover {
+  cursor: pointer;
+}
+
+.confirm-delete .confirm-delete-container .delete-footer .delete-md-bt-c {
+  background-color: #0cc90c;
+}
+
+.confirm-delete .confirm-delete-container .delete-footer .delete-md-bt-d {
+  background-color: red;
+}
+/*# sourceMappingURL=ConfirmDelete.css.map */

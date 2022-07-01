@@ -1,0 +1,47 @@
+.deleted-prod{
+    border-radius: 10px;
+    border: 1px solid rgb(206, 205, 205);
+    max-height: 80vh;
+    overflow: auto;
+    table{
+        width: 100%;
+        border-spacing:0;
+        border-collapse: collapse;
+        #tr-hd{
+        text-align: left;
+        background-color: rgb(255, 30, 30);
+        color: white;
+        :nth-child(1){
+            text-align: center;
+            width: 10%;
+        }
+        :nth-child(2){
+            width: 30%;
+        }
+        :nth-child(3){
+            width: 25%;
+        }
+        :nth-child(6){
+            width: 15%;
+            // background: #000;
+        }
+        th{
+            text-align: left;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    tbody{
+        tr{
+            :nth-child(1){
+                text-align: center;
+            }
+            td{
+                text-align: left;
+            }
+        }
+    }
+}
+}

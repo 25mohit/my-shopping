@@ -20,6 +20,15 @@
   margin: 0;
 }
 
+.header .links-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header .links-div a {
   font-size: 17px;
   margin: 0 20px;
@@ -36,9 +45,97 @@
   text-decoration-thickness: 3px;
 }
 
+.header .links-div #dropdown-cart {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.header .links-div #dropdown-cart .drop-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .links-div #dropdown-cart .drop-footer button {
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.header .links-div #dropdown-cart .drop-footer #to-cart {
+  background-color: green;
+  width: 45%;
+}
+
+.header .links-div #dropdown-cart .drop-footer #clear-cart {
+  background-color: red;
+  width: 45%;
+}
+
+.header .links-div #menu-items {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 300px;
+  overflow: auto;
+  margin: 5px;
+}
+
+.header .links-div #menu-items #map-div {
+  background-color: #e4e3e3;
+  margin: 10px 0;
+  padding: 5px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  display: list-item;
+}
+
+.header .links-div #menu-items #map-div #m-name {
+  color: black;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.header .links-div #menu-items #map-div .footer-div-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .links-div #menu-items #map-div .footer-div-map #m-price {
+  margin: 0;
+}
+
+.header .links-div #menu-items #map-div #m-bt {
+  font-size: 20px;
+  color: red;
+}
+
+.header .links-div #menu-items #map-div:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 5px 1px gray;
+          box-shadow: 1px 1px 5px 1px gray;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
 .header .links-div .wishist-link {
   position: relative;
-  z-index: 5;
 }
 
 .header .links-div .wishist-link .wishlist-length {

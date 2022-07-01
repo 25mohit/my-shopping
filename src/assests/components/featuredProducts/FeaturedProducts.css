@@ -1,0 +1,27 @@
+.featured-products {
+  margin-top: 30px;
+  padding-top: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+}
+
+.featured-products .featured-header .featured-heading {
+  font-size: 35px;
+}
+
+.featured-products .featured-header .featured-heading span {
+  font-size: 15px;
+}
+
+.featured-products .featured-header .f-head {
+  margin: 0;
+  font-weight: bold;
+  color: gray;
+}
+
+.featured-products .featured-pro-card .dummy-item-div {
+  background-color: red;
+  width: 250px;
+}
+/*# sourceMappingURL=FeaturedProducts.css.map */

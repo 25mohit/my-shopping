@@ -1,0 +1,75 @@
+.product-table {
+  border-radius: 10px;
+  border: 1px solid #cecdcd;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.product-table table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.product-table table tr {
+  text-align: left;
+  background-color: #F1F4F8;
+}
+
+.product-table table tr :nth-child(1) {
+  text-align: center;
+  width: 10%;
+}
+
+.product-table table tr :nth-child(2) {
+  width: 30%;
+}
+
+.product-table table tr :nth-child(3) {
+  width: 25%;
+}
+
+.product-table table tr :nth-child(6) {
+  width: 15%;
+}
+
+.product-table table tr th {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #242424;
+}
+
+.product-table table .map-tr {
+  margin: 2px;
+  text-align: left;
+  border-bottom: 1px solid #dcdddf;
+}
+
+.product-table table .map-tr :nth-child(1) {
+  text-align: center;
+}
+
+.product-table table .map-tr td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 0;
+  background-color: white;
+  font-weight: normal;
+  font-size: 17px;
+  text-align: left;
+}
+
+.product-table table .map-tr td #icons-div {
+  margin-left: 20px;
+}
+
+.product-table table .map-tr td #icons-div .tb-dl-ic {
+  color: rebeccapurple;
+}
+
+.product-table table .map-tr td #icons-div .tb-dl-ic:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=ProductTable.css.map */

@@ -1,11 +1,17 @@
 import './Sidebar.css'
 import {sidebarData} from '../../../assests/sidebarData/Data'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+
 export const Sidebar = () => {
     const products = useSelector(state => state.products)
     const combined = () => {
         return[...new Set(products.map(item => item.pCategory))]
     }
+    const filter = useSelector(state => state.byStock)
+    const sort = useSelector(state => state.sort)
+    const dispatch = useDispatch()
+    console.log(filter, sort);
     
     return(
         <div className="sidebar">
@@ -14,7 +20,9 @@ export const Sidebar = () => {
             </div>
             <div className="main-title">Home</div>
             {
-               sidebarData.map(sidebar => <div className='sidebar-items'>{ sidebar.name }</div>)
+               sidebarData.map(sidebar => <div className='sidebar-items'>
+                <Link to={ sidebar.link }>{ sidebar.name }</Link>
+                </div>)
             }
             <p className="category">Category</p>
             <div className="categories-div">

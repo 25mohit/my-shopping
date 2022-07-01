@@ -11,6 +11,7 @@ import { Wishlist } from './assests/pages/wishlist/Wishlist'
 import { Cart } from './assests/pages/cart/Cart'
 import { Sidebar } from './assests/components/sidebar/Sidebar';
 import { ProductPage } from './assests/pages/productPage/ProductPage';
+import { Seller } from './assests/pages/seller/Seller';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path='cart' exact element={<Cart />} />
                 <Route path='/product/:id' exact element={<ProductPage />} />
                 <Route path='/sell-your-item' exact element={<Vendor />}/>
+                <Route path='/seller-profile' exact element={<Seller />} />
             </Routes>
       </div>
           </div>

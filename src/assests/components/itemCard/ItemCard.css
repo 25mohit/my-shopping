@@ -100,4 +100,10 @@
 .item-card .item-card-footer #add-cart-bt:hover {
   cursor: pointer;
 }
+
+.item-card .item-card-footer #remove-cart-bt {
+  color: white;
+  font-weight: bold;
+  background-color: red;
+}
 /*# sourceMappingURL=ItemCard.css.map */

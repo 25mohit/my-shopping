@@ -1,0 +1,165 @@
+.seller {
+  padding: 10px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+  height: 100%;
+}
+
+.seller .seller-container .seller-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.seller .seller-container .seller-header .seller-head {
+  color: #1e1e1e;
+}
+
+.seller .seller-container .seller-header .add-profile-bt {
+  border: none;
+  color: white;
+  padding: 4px 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: green;
+}
+
+.seller .seller-container .seller-header .add-profile-bt:hover {
+  cursor: pointer;
+}
+
+.seller .seller-container .seller-hero .toogle-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.seller .seller-container .seller-hero .toogle-bar button {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  color: #2e2e2e;
+}
+
+.seller .seller-container .seller-hero .toogle-bar .toogle-bt-left {
+  width: 50%;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 10px 0 0 10px;
+  background-color: white;
+}
+
+.seller .seller-container .seller-hero .toogle-bar .toogle-bt-right {
+  width: 50%;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  background-color: #b2b2b2;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-profile {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-profile .seller-info {
+  color: black;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-profile .seller-info .dt {
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-profile .profile-footer {
+  margin-top: 35px;
+  color: gray;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status {
+  margin: 15px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status #ch-lb {
+  color: gray;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status #ch-lb:hover {
+  cursor: pointer;
+  color: #03a9f4;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status input[type=checkbox] {
+  margin-right: 15px;
+  outline: none;
+  width: 60px;
+  height: 25px;
+  position: relative;
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status input:checked[type=checkbox] {
+  background: #03a9f4;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status input[type=checkbox]::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status input:checked[type=checkbox]::before {
+  left: 35px;
+}
+/*# sourceMappingURL=Seller.css.map */

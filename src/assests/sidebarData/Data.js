@@ -1,15 +1,19 @@
 export const sidebarData =  [
     
     {
-        name:'Products'
+        name:'Products',
+        link:''
     },
     {
-        name:"Pages"
+        name:"Pages",
+        link:''
     },
     {
-        name:"Features"
+        name:"Features",
+        link:''
     },
     {
-        name:"Seller"
+        name:"Seller",
+        link:'/seller-profile'
     }
 ]

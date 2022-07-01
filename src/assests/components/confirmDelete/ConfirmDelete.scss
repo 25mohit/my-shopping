@@ -1,0 +1,53 @@
+.confirm-delete{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10,10,10,0.2);
+    .confirm-delete-container{
+        width: 35%;
+        background-color: white;
+        border-radius: 10px;
+        height: fit-content;
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: left;
+        .delete-header{
+            .d-head{
+                font-size: 25px;
+            }
+        }
+        .delete-info{
+            margin: 15px 0;
+            // .info-text-d{
+
+            // }
+        }
+        .delete-footer{
+            text-align: right;
+            button{
+                margin: 0 10px;
+                border: none;
+                padding: 7px 15px;
+                font-size: 17px;
+                border-radius: 5px;
+                font-weight: bold;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .delete-md-bt-c{
+                background-color: rgb(12, 201, 12);
+            }
+            .delete-md-bt-d{
+                background-color: red;
+            }
+
+        }
+    }
+}
