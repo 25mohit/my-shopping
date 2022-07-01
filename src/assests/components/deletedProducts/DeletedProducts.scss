@@ -35,11 +35,14 @@
     }
     tbody{
         tr{
+            border-bottom: 1px solid #dcdddf;
             :nth-child(1){
                 text-align: center;
             }
             td{
                 text-align: left;
+                box-sizing: border-box;
+                padding: 10px 0;
             }
         }
     }

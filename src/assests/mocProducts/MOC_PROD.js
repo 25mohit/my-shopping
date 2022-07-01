@@ -6,34 +6,34 @@ import four from '../images/products/4.png'
 export const moc_produ = [
     {
         id:1,
-        prodTittle: "Ladies Red Kurti",
-        prodDesc: "100% Cotton Home Washable",
-        prodPric:"999",
-        prodSize:['S','M','L','XL','XXL'],
+        pTitle: "Ladies Red Kurti",
+        pDescription: "100% Cotton Home Washable",
+        pPrice:999,
+        pSizes:['S','M','L','XL','XXL'],
         prodImg: one
     },
     {
         id:2,
-        prodTittle: "Denim Royal Jacket",
-        prodDesc: "100% Cotton Home Washable",
-        prodPric:"3999",
-        prodSize:['L','XL','XXL'],
+        pTitle: "Denim Royal Jacket",
+        pDescription: "100% Cotton Home Washable",
+        pPrice:3999,
+        pSizes:['L','XL','XXL'],
         prodImg: two
     },
     {
         id:3,
-        prodTittle: "Girls T-Shirt",
-        prodDesc: "100% Cotton Home Washable",
-        prodPric:"499",
-        prodSize:['S','M','L','XL'],
+        pTitle: "Girls T-Shirt",
+        pDescription: "100% Cotton Home Washable",
+        pPrice:4999,
+        pSizes:['S','M','L','XL'],
         prodImg: three
     },
     {
         id:4,
-        prodTittle: "Blue Office Shirt",
-        prodDesc: "100% Cotton Home Washable",
-        prodPric:"599",
-        prodSize:['S','M','L','XXL'],
+        pTitle: "Blue Office Shirt",
+        pDescription: "100% Cotton Home Washable",
+        pPrice:599,
+        pSizes:['S','M','L','XXL'],
         prodImg: four
     },
 ]

@@ -48,6 +48,11 @@ const reducer = (state= initialState, action) => {
                 ...state,
                 cart:[]
             }
+        case "CLEAR_ALL_DELETED_ITEMS":
+            return{
+                ...state,
+                deleteProducts:[]
+            }
         case "SELLER_PROFILE":
         return{
             ...state,

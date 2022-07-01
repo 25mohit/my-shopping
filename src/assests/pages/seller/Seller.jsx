@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux/es/exports'
+import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { AddProfile } from '../../components/addProfile/AddProfile'
 import { DeletedProducts } from '../../components/deletedProducts/DeletedProducts'
 import { ProductsTable } from '../../components/productsTable/ProductsTable'
@@ -11,7 +11,13 @@ export const Seller = () => {
     const [showDeleted, setShowDeleted] = useState(false)
 
     const userProfile = useSelector(state => state.seller)
+    const dispatch = useDispatch()
 
+    const clearAllItems = () => {
+        dispatch({
+            type:"CLEAR_ALL_DELETED_ITEMS",
+        })
+    }
     return(
         <div className="seller">
                 <div className="seller-container">
@@ -39,8 +45,14 @@ export const Seller = () => {
                                 </div>
                                 :<div className="seller-items">
                                     <div className="items-status">
-                                        <input type="checkbox" id='status-change' onClick={() => setShowDeleted(!showDeleted)}/>
-                                        <label htmlFor="status-change" id='ch-lb'>Active / Deleted</label>
+                                        <div className="tgle-bt">
+                                            <input type="checkbox" id='status-change' onClick={() => setShowDeleted(!showDeleted)}/>
+                                            <label htmlFor="status-change" id='ch-lb'>Active / Deleted</label>
+                                        </div>
+                                        {showDeleted &&
+                                        <div className="clear-dt-itms">
+                                            <button className="clear-all" onClick={ clearAllItems }>Clear All</button>
+                                        </div>}
                                     </div>
                                     {showDeleted ?  
                                     <div id='deleted-products-div'> <DeletedProducts /></div>:

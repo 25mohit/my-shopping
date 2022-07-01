@@ -70,9 +70,29 @@
                     .seller-items{
                         .items-status{
                             margin: 15px 0;
-                            width: fit-content;
+                            width: 100%;
                             display: flex;
-                            align-items: center;
+                            justify-content: space-between;
+                            .clear-dt-itms{
+                                .clear-all{
+                                    border: 2px solid red;
+                                    background-color: red;
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: bold;
+                                    border-radius: 5px;
+                                    &:hover{
+                                        cursor: pointer;
+                                        border: 2px solid red;
+                                        color: red;
+                                        background-color: white;
+                                        transition: 0.6s;
+                                    }
+                                }
+                            }
+                            .tgle-bt{
+                                display: flex;
+                                align-items: center;
                             #ch-lb{
                                 color: gray;
                                 user-select: none;
@@ -121,6 +141,7 @@
                                 left: 35px;
                             }
                         }
+                    }
                         // #active-item-list{
                         // }
                     }

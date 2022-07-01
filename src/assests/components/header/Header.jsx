@@ -5,7 +5,6 @@ import { Nav, Badge, Dropdown } from 'react-bootstrap'
 import {BsCartCheckFill} from 'react-icons/bs'
 import {BsTrash} from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
-import { useEffect, useState } from 'react'
 
 export const Header = () => {
     const cart = useSelector(state => state.cart)
@@ -52,7 +51,7 @@ export const Header = () => {
                                 {cart.map(item => <div id='map-div' key={item.id}>
                                    <p id='m-name'>{item.pTitle}</p> 
                                    <div className="footer-div-map">
-                                        <p id='m-price'>Rs {item.pPrice.split(".")[0]}</p> 
+                                        <p id='m-price'>Rs {item.pPrice}</p> 
                                         <p id='m-bt'><BsTrash onClick={ () => removeFromDropDown(item.id) }/></p>
                                    </div>
                                     </div>)}

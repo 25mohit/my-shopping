@@ -1,0 +1,63 @@
+.dummy-ptoducts {
+  background-color: #df8383;
+  width: 250px;
+  margin: 10px;
+  padding: 0 10px 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.dummy-ptoducts img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.dummy-ptoducts .prod-info .prod-ti {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.dummy-ptoducts .prod-info .prod-de {
+  font-size: 15px;
+  color: white;
+}
+
+.dummy-ptoducts .prod-info .prod-pri {
+  color: white;
+  font-weight: bold;
+}
+
+.dummy-ptoducts .prod-info .item-foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dummy-ptoducts .prod-info .item-foot #item-se {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid #c7c7c7;
+}
+
+.dummy-ptoducts .prod-info .item-foot #cart-bt {
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.dummy-ptoducts .prod-info .item-foot #cart-bt:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=DummyProd.css.map */

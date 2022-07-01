@@ -90,9 +90,34 @@
 
 .seller .seller-container .seller-hero .hero-container .seller-items .items-status {
   margin: 15px 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .clear-dt-itms .clear-all {
+  border: 2px solid red;
+  background-color: red;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .clear-dt-itms .clear-all:hover {
+  cursor: pointer;
+  border: 2px solid red;
+  color: red;
+  background-color: white;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +126,7 @@
           align-items: center;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status #ch-lb {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt #ch-lb {
   color: gray;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -112,14 +137,14 @@
   padding: 0;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status #ch-lb:hover {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt #ch-lb:hover {
   cursor: pointer;
   color: #03a9f4;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status input[type=checkbox] {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt input[type=checkbox] {
   margin-right: 15px;
   outline: none;
   width: 60px;
@@ -134,15 +159,15 @@
   transition: .5s;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status input[type=checkbox]:hover {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt input[type=checkbox]:hover {
   cursor: pointer;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status input:checked[type=checkbox] {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt input:checked[type=checkbox] {
   background: #03a9f4;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status input[type=checkbox]::before {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt input[type=checkbox]::before {
   content: '';
   position: absolute;
   width: 25px;
@@ -159,7 +184,7 @@
   transition: 0.3s;
 }
 
-.seller .seller-container .seller-hero .hero-container .seller-items .items-status input:checked[type=checkbox]::before {
+.seller .seller-container .seller-hero .hero-container .seller-items .items-status .tgle-bt input:checked[type=checkbox]::before {
   left: 35px;
 }
 /*# sourceMappingURL=Seller.css.map */

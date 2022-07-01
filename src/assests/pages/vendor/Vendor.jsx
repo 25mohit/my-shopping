@@ -62,7 +62,7 @@ export const Vendor = () => {
                             <label id='label-vendor' htmlFor="xlSize">XL</label>
                             <input className='checkbox' type="checkbox" id='xxlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'XXL']: pSizes.filter(i => i !== 'XXL'))}/>
                             <label id='label-vendor' htmlFor="xxlSize">XXL</label>
-                            <input className='checkbox' type="checkbox" id='xxxlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'M']: pSizes.filter(i => i !== 'M'))}/>
+                            <input className='checkbox' type="checkbox" id='xxxlSize' onChange={e=> setPSizes(e.target.value?[...pSizes,'XXXL']: pSizes.filter(i => i !== 'XXXl'))}/>
                             <label id='label-vendor' htmlFor="xxxlSize">XXXL</label>
                     </div>}
                     <input type="text" className='input-field' placeholder='Product Price' value={pPrice} onChange={ e => setPPrice(e.target.value)}/>

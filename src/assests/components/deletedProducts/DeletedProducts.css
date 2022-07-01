@@ -42,11 +42,18 @@
   color: white;
 }
 
+.deleted-prod table tbody tr {
+  border-bottom: 1px solid #dcdddf;
+}
+
 .deleted-prod table tbody tr :nth-child(1) {
   text-align: center;
 }
 
 .deleted-prod table tbody tr td {
   text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 0;
 }
 /*# sourceMappingURL=DeletedProducts.css.map */

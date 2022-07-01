@@ -1,6 +1,6 @@
 import './Sidebar.css'
 import {sidebarData} from '../../../assests/sidebarData/Data'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 export const Sidebar = () => {
@@ -8,10 +8,6 @@ export const Sidebar = () => {
     const combined = () => {
         return[...new Set(products.map(item => item.pCategory))]
     }
-    const filter = useSelector(state => state.byStock)
-    const sort = useSelector(state => state.sort)
-    const dispatch = useDispatch()
-    console.log(filter, sort);
     
     return(
         <div className="sidebar">

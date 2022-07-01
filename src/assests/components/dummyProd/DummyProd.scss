@@ -1,0 +1,50 @@
+.dummy-ptoducts{
+background-color: rgb(223, 131, 131);
+width: 250px;
+margin: 10px;
+padding: 0 10px 10px 10px;
+box-sizing: border-box;
+border-radius: 10px;
+text-align: left;
+    img{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+    .prod-info{
+        .prod-ti{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .prod-de{
+            font-size: 15px;
+            color: white;
+    }
+    .prod-pri{
+        color: white;
+        font-weight: bold;
+    }
+    .item-foot{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #item-se{
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 1px solid rgb(199, 199, 199);
+        }
+        #cart-bt{
+            border: none;
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+}
