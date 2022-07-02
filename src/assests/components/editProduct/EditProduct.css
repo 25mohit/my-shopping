@@ -109,4 +109,16 @@
 .edit-product .edit-product-container .edit-center-div .prd-rdit-frm .submit-bt:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 1000px) {
+  .edit-product .edit-product-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .edit-product .edit-product-container {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=EditProduct.css.map */
