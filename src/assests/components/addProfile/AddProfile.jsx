@@ -18,6 +18,7 @@ export const AddProfile = ({ setShowProfile }) => {
                         type:"SELLER_PROFILE",
                         payload:{sName, sEmail, sMobile, company, gst}
                 })
+                setShowProfile(false)
         }
     return(
         <div className="add-profile">

@@ -19,11 +19,23 @@
     background: #b30000; 
   }
 .products{
+    display: list-item;
+    list-style: none;
+    .featured-heading{
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 35px;
+      user-select: none;
+      #sp-fr-pd{
+          font-size: 15px;
+      }
+  }
+  .map-items{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 90vh;
-    overflow: auto;
-    // background-color: orange;
-    scroll-behavior: smooth;
+  }
 }

@@ -17,9 +17,11 @@
         }
     }
     .item-details{
-        display: flex;
-        justify-content: space-between;
+        display: list-item;
         padding: 10px 10px 0 0;
+        .items-center{
+            display: flex;
+            justify-content: space-between; 
         .left{  
             text-align: left;
             padding-left: 15px;
@@ -62,6 +64,14 @@
                 }
             }
         }
+    }
+    .items-select-menu{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
     }
     .item-card-footer{
         padding: 10px 0 10px 15px;

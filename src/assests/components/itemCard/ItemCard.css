@@ -21,16 +21,20 @@
 }
 
 .item-card .item-details {
+  display: list-item;
+  padding: 10px 10px 0 0;
+}
+
+.item-card .item-details .items-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 10px 0 0;
 }
 
-.item-card .item-details .left {
+.item-card .item-details .items-center .left {
   text-align: left;
   padding-left: 15px;
   -webkit-box-sizing: border-box;
@@ -38,7 +42,7 @@
   width: 80%;
 }
 
-.item-card .item-details .left .item-name {
+.item-card .item-details .items-center .left .item-name {
   letter-spacing: 2px;
   margin: 0;
   padding: 0;
@@ -46,7 +50,7 @@
   text-transform: capitalize;
 }
 
-.item-card .item-details .left .seller-name {
+.item-card .item-details .items-center .left .seller-name {
   color: gray;
   margin: 0;
   padding: 0;
@@ -54,32 +58,47 @@
   font-size: 14px;
 }
 
-.item-card .item-details .left .item-decription {
+.item-card .item-details .items-center .left .item-decription {
   color: gray;
   font-weight: 400;
 }
 
-.item-card .item-details .left .item-price {
+.item-card .item-details .items-center .left .item-price {
   color: gray;
   font-size: 15px;
 }
 
-.item-card .item-details .left:hover {
+.item-card .item-details .items-center .left:hover {
   cursor: pointer;
 }
 
-.item-card .item-details .right {
+.item-card .item-details .items-center .right {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.item-card .item-details .right #heart-icon {
+.item-card .item-details .items-center .right #heart-icon {
   color: orange;
   font-weight: bold;
 }
 
-.item-card .item-details .right #heart-icon:hover {
+.item-card .item-details .items-center .right #heart-icon:hover {
   cursor: pointer;
+}
+
+.item-card .item-details .items-select-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .item-card .item-card-footer {
