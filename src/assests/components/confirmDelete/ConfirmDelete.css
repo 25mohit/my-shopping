@@ -62,4 +62,16 @@
 .confirm-delete .confirm-delete-container .delete-footer .delete-md-bt-d {
   background-color: red;
 }
+
+@media screen and (max-width: 800px) {
+  .confirm-delete .confirm-delete-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .confirm-delete .confirm-delete-container {
+    width: 85%;
+  }
+}
 /*# sourceMappingURL=ConfirmDelete.css.map */
