@@ -19,13 +19,28 @@
 .edit-product .edit-product-container {
   background-color: white;
   border-radius: 10px;
-  width: 50%;
+  width: 40%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.edit-product .edit-product-container .prd-rdit-frm {
+.edit-product .edit-product-container .edit-center-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,5 +50,63 @@
           flex-direction: column;
   width: 80%;
   text-align: left;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm .checkbox {
+  margin-right: 10px;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #label-vendor {
+  font-size: 18px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #edit-field {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #edit-field:focus {
+  border: 1px solid red;
+  outline: 3px solid rgba(255, 168, 6, 0.7);
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #edit-field::-webkit-input-placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #edit-field:-ms-input-placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #edit-field::-ms-input-placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm #edit-field::placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm .submit-bt {
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: orange;
+  border: 0.5px solid #ff4949;
+}
+
+.edit-product .edit-product-container .edit-center-div .prd-rdit-frm .submit-bt:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=EditProduct.css.map */

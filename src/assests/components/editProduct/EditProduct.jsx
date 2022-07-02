@@ -13,7 +13,7 @@ export const EditProduct = ({setShowEdit, updProd, id}) => {
 
     const dispatch = useDispatch()
     console.log(updProd)
-    
+
     const updateProduct = (e) => {
         e.preventDefault()
         dispatch({
@@ -22,6 +22,7 @@ export const EditProduct = ({setShowEdit, updProd, id}) => {
                 id, pTitle, pDescription, pCategory, pSizes, pQty, pPrice
             }
         })
+        setShowEdit(false)
     }
     return(
         <div className="edit-product">
@@ -29,18 +30,19 @@ export const EditProduct = ({setShowEdit, updProd, id}) => {
                         <div className="edit-header">
                             <button className="edit-md-bt" onClick={() => setShowEdit(false)}><ImCross /></button>
                         </div>
+                        <div className="edit-center-div">
                         <form action="" className="prd-rdit-frm">
                                 <label htmlFor="prdName">Product Name</label>
-                                <input type="text" name='prdName'  value={pTitle} onChange={e => setPTitle(e.target.value)} />
+                                <input type="text" name='prdName' id='edit-field'  value={pTitle} onChange={e => setPTitle(e.target.value)} />
                                 <label htmlFor="prdName">Discription</label>
-                                <input type="text" name='prdName' value={pDescription} onChange={e => setPDescription(e.target.value)}/>
-                                <select name="" id="" className='input-field' value={pQty} onChange={e => setPQty(e.target.value)}>
+                                <input type="text" name='prdName' id='edit-field'  value={pDescription} onChange={e => setPDescription(e.target.value)}/>
+                                <select name=""  id='edit-field' value={pQty} onChange={e => setPQty(e.target.value)}>
                                     <option value='' disabled>Quantity</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                 </select>
-                                <select  className='input-field' value={pCategory} onChange={ e => setPCategory(e.target.value)}>
+                                <select  id='edit-field'  value={pCategory} onChange={ e => setPCategory(e.target.value)}>
                                     <option value="" disabled>Select</option>
                                     <option value="tv , electronics">TV, Appliances, Electronics</option>
                                     <option value="mobiles , computers">Mobiles, Computers</option>
@@ -67,9 +69,10 @@ export const EditProduct = ({setShowEdit, updProd, id}) => {
                                         <label id='label-vendor' htmlFor="xxxlSize">XXXL</label>
                                 </div>
                                 <label htmlFor="prdName">Price</label>
-                                <input type="text" name='prdName' value={pPrice} onChange={e=> setPPrice(e.target.value)}/>
-                                <button onClick={ updateProduct }>UPDATE</button>
+                                <input type="text" id='edit-field' name='prdName' value={pPrice} onChange={e=> setPPrice(e.target.value)}/>
+                                <button onClick={ updateProduct } className='submit-bt'>UPDATE</button>
                         </form>
+                        </div>
                 </div>
         </div>
     )

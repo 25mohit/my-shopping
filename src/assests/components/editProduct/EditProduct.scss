@@ -11,13 +11,56 @@
         .edit-product-container{
             background-color: white;
             border-radius: 10px;
-            width: 50%;
+            width: 40%;
             height: fit-content;
-            .prd-rdit-frm{
+            padding: 20px 0;
+            box-sizing: border-box;
+            .edit-center-div{
                 display: flex;
-                flex-direction: column;
-                width: 80%;
-                text-align: left;
+                justify-content: center;
+                align-items: center;
+                .prd-rdit-frm{
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    text-align: left;
+                    .checkbox{
+                        margin-right: 10px;
+                    }
+                    #label-vendor{
+                        font-size: 18px;
+                        margin-right: 20px;
+                        margin-top: 5px;
+                    }
+                    #edit-field{
+                        padding: 10px;
+                        font-size: 17px;
+                        border: 1px solid rgb(188, 188, 188);
+                        border-radius: 5px;
+                        margin: 5px 0;
+                        &:focus{
+                            border: 1px solid red;
+                            outline: 3px solid rgba(255, 168, 6,0.7);
+                        }
+                        &::placeholder{
+                            padding-left: 10px;
+                            font-size: 15px;
+                        }
+                    }
+                    .submit-bt{
+                        font-size: 16px;
+                        padding: 15px 0;
+                        margin-top: 15px;
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        background-color: orange;
+                        border: 0.5px solid rgb(255, 73, 73);
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
 }
