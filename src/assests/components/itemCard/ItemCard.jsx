@@ -2,7 +2,13 @@ import './ItemCard.css'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { BsSuitHeartFill } from 'react-icons/bs'
-import shoe from '../../../assests/images/products/shoe.png'
+import one from '../../images/rndImgs/1.png'
+import two from '../../images/rndImgs/2.png'
+import three from '../../images/rndImgs/3.png'
+import four from '../../images/rndImgs/4.png'
+import five from '../../images/rndImgs/5.png'
+import six from '../../images/rndImgs/6.png'
+
 import { useState } from 'react'
 
 export const ItemCard = ({ data }) => {
@@ -20,6 +26,7 @@ export const ItemCard = ({ data }) => {
             payload: data
         })
     }
+
     const addToWidhlist = () => {
         dispatch({
             type:"ADD_TO_WISHLIST",
@@ -34,18 +41,26 @@ export const ItemCard = ({ data }) => {
     }
 
     var quen = data.pQty;
-    console.log(typeof(quen));
-    console.log(quen);
     var que  = [];
     for(let i=0;i<quen;i++){
         que.push(i+1)
     }
-    console.log(que);
+    
+    // TO RANDOMELY CHOOSING PRODUCT IMAGES
+    var eleImg = [one, two, three, four, five, six]
+    var chooseImg = eleImg[Math.floor(Math.random()*eleImg.length)]
+
+    var ranImg = undefined;
+    if(data.pCategory=='tv , electronics'){
+        ranImg= chooseImg
+    }
+
 
     return(
         <div className="item-card">
             <div className="img-div">
-                <img src={ shoe } alt="" />
+                <img src={ ranImg } alt="" />
+               
             </div>
             <div className="item-details">
                     <div className="items-center"  onClick={() => {navigate('/product/'+ data.id )}}>
@@ -63,7 +78,6 @@ export const ItemCard = ({ data }) => {
                         <select  name="" id="" value={buyQty} onChange={e=> setBuyQty(e.target.value)}>
                             <option value='' disabled>Quentity</option>
                             {que.map(qty => <option key={ qty } value={qty}>{ qty }</option>)}
-                            {console.log(que)}
                         </select>
                             {data.pSizes.length>0 && <select  value={ buySize } onChange={e=> setBuySize(e.target.value)}>
                                 <option value='' disabled>Sizes</option>
