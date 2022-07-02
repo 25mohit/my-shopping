@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { BsSuitHeartFill } from 'react-icons/bs'
 import one from '../../images/rndImgs/1.png'
-import two from '../../images/rndImgs/2.png'
-import three from '../../images/rndImgs/3.png'
-import four from '../../images/rndImgs/4.png'
-import five from '../../images/rndImgs/5.png'
+import two from '../../images/rndImgs/2.jpg'
+import three from '../../images/rndImgs/3.jpg'
+import four from '../../images/rndImgs/4.jpg'
+import five from '../../images/rndImgs/5.webp'
 import six from '../../images/rndImgs/6.png'
+import seven from '../../images/rndImgs/7.jpg'
+import eight from '../../images/rndImgs/8.webp'
+import ten from '../../images/rndImgs/10.jpg'
 
 import { useState } from 'react'
 
@@ -19,6 +22,38 @@ export const ItemCard = ({ data }) => {
     const navigate = useNavigate()
     const cart = useSelector(state => state.cart)
     const sellerProfile = useSelector(state => state.seller)
+
+    
+    // TO RANDOMELY CHOOSING PRODUCT IMAGES
+
+    var ranImg = undefined;
+        if(data.pCategory=='mobiles , computers'){
+            ranImg= one
+        }
+        if(data.pCategory=='tv , electronics'){
+            ranImg= ten
+        }
+        if(data.pCategory=='men Clothing'){
+            ranImg= eight
+        }
+        if(data.pCategory=='women Clothing'){
+            ranImg= seven
+        }
+        if(data.pCategory=='beauty , health'){
+            ranImg= five
+        }
+        if(data.pCategory=='Grocery'){
+            ranImg= six
+        }
+        if(data.pCategory=='car, moterbikes'){
+            ranImg= three
+        }
+        if(data.pCategory=='books'){
+            ranImg= two
+        }
+        if(data.pCategory=='baby products , toys'){
+            ranImg= four
+        }
 
     const addToCart = () => {
         dispatch({
@@ -46,25 +81,16 @@ export const ItemCard = ({ data }) => {
         que.push(i+1)
     }
     
-    // TO RANDOMELY CHOOSING PRODUCT IMAGES
-    var eleImg = [one, two, three, four, five, six]
-    var chooseImg = eleImg[Math.floor(Math.random()*eleImg.length)]
-
-    var ranImg = undefined;
-    if(data.pCategory=='tv , electronics'){
-        ranImg= chooseImg
-    }
-
+    
 
     return(
         <div className="item-card">
-            <div className="img-div">
-                <img src={ ranImg } alt="" />
-               
+            <div className="img-div" onClick={() => {navigate('/product/'+ data.id )}}>
+                <img src={ ranImg } alt=""/>
             </div>
             <div className="item-details">
-                    <div className="items-center"  onClick={() => {navigate('/product/'+ data.id )}}>
-                            <div className="left">
+                    <div className="items-center">
+                            <div className="left" onClick={() => {navigate('/product/'+ data.id )}}>
                                     <p className="item-name">{ data.pTitle }</p>
                                     {sellerProfile && <p className="seller-name">Solde By: { sellerProfile.sName }</p>}
                                     <p className="item-decription">{ data.pDescription }</p>

@@ -6,14 +6,11 @@ export const Vendor = () => {
     const [pTitle, setPTitle] = useState('')
     const [pCategory, setPCategory] = useState('')
     const [pSizes, setPSizes] = useState([])
-    const [pPrice, setPPrice] = useState()
+    const [pPrice, setPPrice] = useState('')
     const [pQty, setPQty] = useState('')
     const [pDescription, setPDescription] = useState('')
 
     const dispatch = useDispatch()
-
-    const products = useSelector(state => state.products)
-    console.log(products);
 
     const submitProduct = (e) => {
         e.preventDefault()

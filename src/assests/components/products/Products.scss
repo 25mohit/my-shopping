@@ -22,6 +22,8 @@
     display: list-item;
     list-style: none;
     .featured-heading{
+      padding: 0 25px;
+      box-sizing: border-box;
       margin-top: 20px;
       display: flex;
       align-items: center;

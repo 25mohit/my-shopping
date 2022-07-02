@@ -12,7 +12,6 @@ export const EditProduct = ({setShowEdit, updProd, id}) => {
     const [pPrice, setPPrice] = useState(updProd.pPrice)
 
     const dispatch = useDispatch()
-    console.log(updProd)
 
     const updateProduct = (e) => {
         e.preventDefault()

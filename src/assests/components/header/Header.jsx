@@ -42,7 +42,7 @@ export const Header = ({setToogleSidebar, toogleSidebar}) => {
                 { cart.length > 0 && <span className="cart-length">{ cart.length }</span>}
                 </Link> */}
                 <Nav id='dropdown-cart'>
-                    <Dropdown alignRight>
+                    <Dropdown >
                         <Dropdown.Toggle variant="success">
                             <BsCartCheckFill color='white' fontSize="25px" />
                             <Badge color='red'>{cart.length}</Badge>

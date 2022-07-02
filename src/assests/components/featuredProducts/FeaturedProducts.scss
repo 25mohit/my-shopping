@@ -3,6 +3,9 @@
     padding: 25px 0;
     box-sizing: border-box;
     .featured-header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         .featured-heading{
             display: flex;
             align-items: center;

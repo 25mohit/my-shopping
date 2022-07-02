@@ -15,6 +15,9 @@
         img{
             width: 100%;
         }
+        &:hover{
+            cursor: pointer;
+        }
     }
     .item-details{
         display: list-item;

@@ -16,7 +16,6 @@ export const ProductsTable = () => {
     const [updProd, setUpdProd] = useState({pTitle:'', pDescription:'', pQty:'',pPrice:'',pSizes:[]})
 
     const products = useSelector(state => state.products)
-        console.log(products);
 
     const func = (id, title, desc, size, qty, pris ) => {
         setShowDelete(true)
@@ -27,60 +26,60 @@ export const ProductsTable = () => {
     const updateProduct = (id, title, desc, size, qty, pris ) => {
         setShowEdit(true)
         setEditId(id)
-        console.log(id, title, desc, size, qty, pris);
         setUpdProd({pTitle:title, pDescription:desc, pSizes:[size], pQty: qty, pPrice:pris})
     }
+
     return(
         <div className='product-table'>
              <table>
-                                                    <tr id='tb-tr'>
-                                                        <th id='tb-th'>No.</th>
-                                                        <th id='tb-th'>Product Title</th>
-                                                        <th id='tb-th'>Description</th>
-                                                        <th id='tb-th'>Sizes</th>
-                                                        <th id='tb-th'>Quantity</th>
-                                                        <th id='tb-th'>Price</th>
-                                                    </tr>
-                                                <tbody>
-                                                {
-                                                    products.map((product,i) => <tr key={ product.id } className='map-tr'>
-                                                        <td>{i+1}</td>
-                                                        <td>{ product.pTitle }</td>
-                                                        <td>{ product.pDescription}</td>    
-                                                        <td>
-                                                            { product.pSizes && 
-                                                            <select name="" id="size-select">
-                                                                <option value="" disabled>Sizes</option>
-                                                            { product.pSizes.map((size, i)=> <option key={i}>{ size }</option>)}
-                                                            </select>}
-                                                            </td>
-                                                        <td>{ product.pQty }</td>
-                                                        <td><span >{ product.pPrice }</span>
-                                                        <span id='icons-div'>
-                                                           <FaRegEdit  className='tb-dl-ic' onClick={() => { updateProduct(
-                                                            product.id, 
-                                                            product.pTitle, 
-                                                            product.pDescription,
-                                                            product.pSizes,
-                                                            product.pQty,
-                                                            product.pPrice
-                                                           )}}/>
-                                                            <BsFillTrashFill className='tb-dl-ic' onClick={() => {
-                                                                func(product.id, 
-                                                                product.pTitle, 
-                                                                product.pDescription,
-                                                                product.pSize,
-                                                                product.pQty,
-                                                                product.pPrice
-                                                                )}}/>
-                                                        </span>
-                                                            </td>
-                                                    </tr>
-                                                    )}
-                                                    {showDelete && <ConfirmDelete setShowDelete={ setShowDelete } id={dId} delProd={delProd}/>}
-                                                    {showEdit && <EditProduct setShowEdit={ setShowEdit } updProd={ updProd } id={ editId }/>}
-                                                    </tbody>
-                                                </table>
+                <tbody>
+                    <tr id='tb-tr'>
+                        <th id='tb-th'>No.</th>
+                        <th id='tb-th'>Product Title</th>
+                        <th id='tb-th'>Description</th>
+                        <th id='tb-th'>Sizes</th>
+                        <th id='tb-th'>Quantity</th>
+                        <th id='tb-th'>Price</th>
+                    </tr>
+                {
+                    products.map((product,i) => <tr key={ product.id } className='map-tr'>
+                        <td>{i+1}</td>
+                        <td>{ product.pTitle }</td>
+                        <td>{ product.pDescription}</td>    
+                        <td>
+                            { product.pSizes && 
+                            <select name="" id="size-select">
+                                <option value="" disabled>Sizes</option>
+                            { product.pSizes.map((size, i)=> <option key={i}>{ size }</option>)}
+                            </select>}
+                            </td>
+                        <td>{ product.pQty }</td>
+                        <td><span >{ product.pPrice }</span>
+                        <span id='icons-div'>
+                            <FaRegEdit  className='tb-dl-ic' onClick={() => { updateProduct(
+                            product.id, 
+                            product.pTitle, 
+                            product.pDescription,
+                            product.pSizes,
+                            product.pQty,
+                            product.pPrice
+                            )}}/>
+                            <BsFillTrashFill className='tb-dl-ic' onClick={() => {
+                                func(product.id, 
+                                product.pTitle, 
+                                product.pDescription,
+                                product.pSize,
+                                product.pQty,
+                                product.pPrice
+                                )}}/>
+                        </span>
+                            </td>
+                    </tr>
+                    )}
+                    </tbody>
+                </table>
+                    {showDelete && <ConfirmDelete setShowDelete={ setShowDelete } id={dId} delProd={delProd}/>}
+                    {showEdit && <EditProduct setShowEdit={ setShowEdit } updProd={ updProd } id={ editId }/>}
         </div>
     )
 }

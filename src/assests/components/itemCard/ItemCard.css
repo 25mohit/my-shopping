@@ -20,6 +20,10 @@
   width: 100%;
 }
 
+.item-card .img-div:hover {
+  cursor: pointer;
+}
+
 .item-card .item-details {
   display: list-item;
   padding: 10px 10px 0 0;

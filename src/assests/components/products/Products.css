@@ -24,6 +24,9 @@
 }
 
 .products .featured-heading {
+  padding: 0 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;

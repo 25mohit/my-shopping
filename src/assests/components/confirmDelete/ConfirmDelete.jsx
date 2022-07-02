@@ -17,7 +17,7 @@ export const ConfirmDelete = ({ setShowDelete,id, delProd }) => {
             type:"DELETE_PRODUCT",
             payload:id
         })
-        console.log(delProd.pName, delProd.des)
+        
         dispatch({
             type:"ADD_TO_DELETED_PRODUCTS",
             payload:{
@@ -25,7 +25,6 @@ export const ConfirmDelete = ({ setShowDelete,id, delProd }) => {
             }            
         })
         setShowDelete(false)
-        // console.log(id);
     }
     
     return(

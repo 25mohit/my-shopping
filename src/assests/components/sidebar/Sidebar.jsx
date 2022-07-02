@@ -16,7 +16,7 @@ export const Sidebar = () => {
             </div>
             <div className="main-title">Home</div>
             {
-               sidebarData.map(sidebar => <div className='sidebar-items'>
+               sidebarData.map(sidebar => <div key={ sidebar.id } className='sidebar-items'>
                 <Link to={ sidebar.link }>{ sidebar.name }</Link>
                 </div>)
             }

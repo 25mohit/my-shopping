@@ -15,7 +15,6 @@ export const Seller = () => {
     const deletedProducts = useSelector(state => state.deleteProducts)
     const products = useSelector(state => state.products)
 
-    console.log(deletedProducts);
     const dispatch = useDispatch()
 
     const clearAllItems = () => {
