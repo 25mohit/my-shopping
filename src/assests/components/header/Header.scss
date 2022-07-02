@@ -8,6 +8,15 @@
     justify-content: space-between;
     align-items: center;
     .offer-div{
+        #bar-ico{
+            color: white;
+            font-size: 35px;
+            display: none;
+            &:hover{
+                cursor: pointer;
+                color: rgb(50, 193, 50);
+            }
+        }
         .offer-text{
             margin: 0;
         }
@@ -117,4 +126,16 @@
             }
         }
     }
+}
+@media screen and (max-width:750px) {
+        .header{
+            .offer-div{
+                .offer-text{
+                    display: none;
+                }
+                #bar-ico{
+                    display: flex;
+                }
+            }
+        }
 }

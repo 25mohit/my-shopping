@@ -5,7 +5,7 @@
     list-style: none;
     .seller-heading{
         font-size: 50px;
-        span{
+        #hd-sp{
             font-size: 30px;
         }
     }
@@ -58,6 +58,34 @@
                 &:hover{
                     cursor: pointer;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width:1000px) {
+    .vendor-div{
+        .seller-heading{
+            font-size: 35px;
+        }
+        .form{
+            .vendor-form{
+                width: 70%;
+            }
+        }
+    }
+}
+@media screen and (max-width:650px) {
+    .vendor-div{
+        .seller-heading{
+            font-size: 20px;
+            margin: 20px 0;
+            #hd-sp{
+                font-size: 20px;
+            }
+        }
+        .form{
+            .vendor-form{
+                width: 90%;
             }
         }
     }

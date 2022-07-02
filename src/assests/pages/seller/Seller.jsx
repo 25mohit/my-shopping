@@ -61,7 +61,7 @@ export const Seller = () => {
                                     </div>
                                     {showDeleted ?  
                                     <div id='deleted-products-div'> {deletedProducts.length > 0? <DeletedProducts />:
-                                    <p id='empt-dt-txt'>Nothing to show here, once you delete and item, it's appear here !</p>}
+                                    <p id='empt-dt-txt'>Nothing to show here, once you delete any item, it's appear here !</p>}
                                     </div>:
                                     <div id='active-item-list'>{ products.length >0 ? <ProductsTable /> :
                                     <p id='empt-dt-txt'>Currently nothing to show here. Start adding Products from <Link to='/sell-your-item'>Sell</Link> section, then you see your listed Products here !</p>} </div>

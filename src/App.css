@@ -13,9 +13,24 @@
 
 .App .main .other{
   flex: 5;
+  width: fit-content;
 }
 
 .App .main .hide{
   flex: 1;
-  display: none;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  background-color: rgba(255,255,255,0.6);
+  backdrop-filter: blur(4px);
+}
+
+@media screen and (max-width:750px) {
+  .App .main .show{
+    display: none;
+  }
+  .App .main .hide{
+    flex: 1;
+    display:flex;
+  }
 }

@@ -17,7 +17,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [showMessage, setShowMessage] = useState(false)
-  const [toogleSidebar, setToogleSidebar] = useState('')
+  const [toogleSidebar, setToogleSidebar] = useState('show')
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,9 +29,9 @@ function App() {
   return (
     <div className="App">
         <Router>
-          <Header />
+          <Header setToogleSidebar={setToogleSidebar} toogleSidebar={ toogleSidebar }/>
       <div className='main'>
-      <div className='show'>
+      <div className={ toogleSidebar }>
           <Sidebar />
       </div>
       <div className='other'>

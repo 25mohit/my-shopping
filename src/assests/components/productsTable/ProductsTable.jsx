@@ -4,12 +4,16 @@ import { BsFillTrashFill } from 'react-icons/bs'
 import { FaRegEdit } from 'react-icons/fa'
 import { ConfirmDelete } from '../confirmDelete/ConfirmDelete'
 import { useState } from 'react'
+import { EditProduct } from '../editProduct/EditProduct'
 
 export const ProductsTable = () => {
 
     const [showDelete, setShowDelete] = useState(false)
+    const [showEdit, setShowEdit] = useState(false)
     const [dId, setDId] = useState()
+    const [editId, setEditId] = useState()
     const [delProd, setDelProd] = useState({pName:'', des:'', quent:'', pri:'', siz:''})
+    const [updProd, setUpdProd] = useState({pTitle:'', pDescription:'', pQty:'',pPrice:'',pSizes:[]})
 
     const products = useSelector(state => state.products)
         console.log(products);
@@ -18,6 +22,13 @@ export const ProductsTable = () => {
         setShowDelete(true)
         setDId(id)
         setDelProd({pName: title, des:desc, quent: qty, pri:pris, siz: size})
+    }
+
+    const updateProduct = (id, title, desc, size, qty, pris ) => {
+        setShowEdit(true)
+        setEditId(id)
+        console.log(id, title, desc, size, qty, pris);
+        setUpdProd({pTitle:title, pDescription:desc, pSizes:[size], pQty: qty, pPrice:pris})
     }
     return(
         <div className='product-table'>
@@ -35,7 +46,7 @@ export const ProductsTable = () => {
                                                     products.map((product,i) => <tr key={ product.id } className='map-tr'>
                                                         <td>{i+1}</td>
                                                         <td>{ product.pTitle }</td>
-                                                        <td>{ product.pDescription}</td>
+                                                        <td>{ product.pDescription}</td>    
                                                         <td>
                                                             { product.pSizes && 
                                                             <select name="" id="size-select">
@@ -46,7 +57,14 @@ export const ProductsTable = () => {
                                                         <td>{ product.pQty }</td>
                                                         <td><span >{ product.pPrice }</span>
                                                         <span id='icons-div'>
-                                                           <FaRegEdit  className='tb-dl-ic'/>
+                                                           <FaRegEdit  className='tb-dl-ic' onClick={() => { updateProduct(
+                                                            product.id, 
+                                                            product.pTitle, 
+                                                            product.pDescription,
+                                                            product.pSizes,
+                                                            product.pQty,
+                                                            product.pPrice
+                                                           )}}/>
                                                             <BsFillTrashFill className='tb-dl-ic' onClick={() => {
                                                                 func(product.id, 
                                                                 product.pTitle, 
@@ -60,6 +78,7 @@ export const ProductsTable = () => {
                                                     </tr>
                                                     )}
                                                     {showDelete && <ConfirmDelete setShowDelete={ setShowDelete } id={dId} delProd={delProd}/>}
+                                                    {showEdit && <EditProduct setShowEdit={ setShowEdit } updProd={ updProd } id={ editId }/>}
                                                     </tbody>
                                                 </table>
         </div>

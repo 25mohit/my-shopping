@@ -4,9 +4,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Nav, Badge, Dropdown } from 'react-bootstrap'
 import {BsCartCheckFill} from 'react-icons/bs'
 import {BsTrash} from 'react-icons/bs'
+import {GoThreeBars} from 'react-icons/go'
 import { useDispatch } from 'react-redux'
 
-export const Header = () => {
+export const Header = ({setToogleSidebar, toogleSidebar}) => {
     const cart = useSelector(state => state.cart)
     const wishlist = useSelector(state => state.wishlist)
 
@@ -29,6 +30,7 @@ export const Header = () => {
         <div className="header">
             <div className="offer-div">
                 <p className="offer-text">Get 10% OFF in the Cart Section - <strong>Buy Now !</strong></p>
+                <GoThreeBars id='bar-ico' onClick={()=>setToogleSidebar(toogleSidebar == 'show' ? 'hide' : 'show')}/>
             </div>
             <div className="links-div">
                 <Link to='/'>Home</Link>

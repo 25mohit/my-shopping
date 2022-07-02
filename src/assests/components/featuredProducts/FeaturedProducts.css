@@ -1,11 +1,22 @@
 .featured-products {
+  width: 100%;
   padding: 25px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: white;
 }
 
 .featured-products .featured-header .featured-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 35px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -13,7 +24,7 @@
           user-select: none;
 }
 
-.featured-products .featured-header .featured-heading span {
+.featured-products .featured-header .featured-heading #sp-fr-pd {
   font-size: 15px;
 }
 

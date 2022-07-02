@@ -110,4 +110,16 @@
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
+
+@media screen and (max-width: 1000px) {
+  .add-profile .add-profile-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .add-profile .add-profile-container {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=AddProfile.css.map */

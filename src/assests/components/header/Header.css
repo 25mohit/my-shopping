@@ -16,6 +16,17 @@
           align-items: center;
 }
 
+.header .offer-div #bar-ico {
+  color: white;
+  font-size: 35px;
+  display: none;
+}
+
+.header .offer-div #bar-ico:hover {
+  cursor: pointer;
+  color: #32c132;
+}
+
 .header .offer-div .offer-text {
   margin: 0;
 }
@@ -163,5 +174,16 @@
   padding: 2px 7px;
   border-radius: 50%;
   background-color: red;
+}
+
+@media screen and (max-width: 750px) {
+  .header .offer-div .offer-text {
+    display: none;
+  }
+  .header .offer-div #bar-ico {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

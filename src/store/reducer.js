@@ -58,31 +58,16 @@ const reducer = (state= initialState, action) => {
             ...state,
             seller:action.payload
         }
-        // case "CHANGE_CART_QTY":
-        //     return{
-        //         ...state,
-        //         cart:state.cart.filter(c => c.id===action.payload.id?c.qty=action.payload.qty:c.qty)
-        //     }
-        // case "SORT_BY_PRICE":
-        //     return{
-        //         ...state,
-        //         sort:action.payload
-        //     }
-        // case "FILTER_BY_STOCK":
-        //     return{
-        //         ...state,
-        //         byStock:!state.byStock
-        //     }
-        // case "FILTER_BY_SEARCH":
-        //     return{
-        //         ...state,
-        //         searchQuery:action.payload
-        //     }
-        // case "CLEAR_FILTER":
-        //     return{
-        //         byStock:false,
-        //         searchQuery:''
-        //     }
+        case "EDIT_LISTED_PRODUCT":
+           const findProductIndex = state.products.findIndex(product => product.id ==action.payload.id)
+           if(findProductIndex>=0){
+            state.products[findProductIndex].pTitle = action.payload.pTitle
+            state.products[findProductIndex].pCategory = action.payload.pCategory
+            state.products[findProductIndex].pSizes = action.payload.pSizes
+            state.products[findProductIndex].pPrice = action.payload.pPrice
+            state.products[findProductIndex].pQty = action.payload.pQty
+            state.products[findProductIndex].pDescription = action.payload.pDescription
+           }
             default:
                 return state;
     }

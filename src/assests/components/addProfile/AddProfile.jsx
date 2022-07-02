@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { ImCross } from 'react-icons/im'
 import './AddProfile.css'
 
 export const AddProfile = ({ setShowProfile }) => {
@@ -23,7 +24,7 @@ export const AddProfile = ({ setShowProfile }) => {
                 <div className="add-profile-container">
                         <div className="ad-pr-head">
                                 <h1 className="up-pr">Add Profile</h1>
-                                <button id='md-cl-bt' onClick={() => setShowProfile(false)}>X</button>
+                                <button id='md-cl-bt' onClick={() => setShowProfile(false)}><ImCross /></button>
                         </div>
                         <div className="center-form">
                         <form action="submit" className="update-profile">

@@ -7,7 +7,7 @@ export const Vendor = () => {
     const [pCategory, setPCategory] = useState('')
     const [pSizes, setPSizes] = useState([])
     const [pPrice, setPPrice] = useState()
-    const [pQty, setPQty] = useState('')
+    const [pQty, setPQty] = useState()
     const [pDescription, setPDescription] = useState('')
 
     const dispatch = useDispatch()
@@ -28,7 +28,7 @@ export const Vendor = () => {
     }
     return(
         <div className="vendor-div">
-                    <h1 className="seller-heading">Sell your Product here ! <span>with just one click..</span></h1>
+                    <h1 className="seller-heading">Sell your Product here ! <span id='hd-sp'>with just one click..</span></h1>
                 <div className='form'>
                     <form action="" className='vendor-form'>
                     <input type="text" className='input-field' placeholder='Product Title' value={pTitle} onChange={ e => setPTitle(e.target.value)}/>
