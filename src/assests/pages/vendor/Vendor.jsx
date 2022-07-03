@@ -21,7 +21,7 @@ export const Vendor = () => {
                 pTitle, pCategory, pSizes, pPrice, pQty, pDescription
             }
         })
-        alert('Added !')
+        // alert('Added !')
     }
     var qtyNumber = []
     for(let i=0;i<15;i++){

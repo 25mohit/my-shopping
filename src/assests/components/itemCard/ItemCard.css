@@ -111,9 +111,9 @@
 }
 
 .item-card .item-card-footer #add-cart-bt {
-  border: none;
-  background-color: #393939;
   color: white;
+  background-color: #393939;
+  border: none;
   padding: 5px 15px;
   font-size: 16px;
   border-radius: 5px;
@@ -128,5 +128,14 @@
   color: white;
   font-weight: bold;
   background-color: red;
+  border: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.item-card .item-card-footer #remove-cart-bt:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=ItemCard.css.map */

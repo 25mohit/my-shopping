@@ -6,9 +6,6 @@ const initialState = {
     wishlist:[],
     seller:'',
     deleteProducts:[]
-    // byStock:false,
-    // searchQuery:'',
-    // sort:true
 }
 const reducer = (state= initialState, action) => {
     switch(action.type){
@@ -43,10 +40,20 @@ const reducer = (state= initialState, action) => {
                 ...state,
                 cart:state.cart.filter(item => item.id !== action.payload)
             }
+        case "REMOVE_FROM_WISHLIST":
+            return{
+                ...state,
+                wishlist:state.wishlist.filter(item => item.id !== action.payload)
+            }
         case "CLEAR_CART":
             return{
                 ...state,
                 cart:[]
+            }
+        case "CLEAR_WISHLIST":
+            return{
+                ...state,
+                wishlist:[]
             }
         case "CLEAR_ALL_DELETED_ITEMS":
             return{

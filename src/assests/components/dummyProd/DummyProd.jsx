@@ -1,5 +1,5 @@
 import './DummyProd.css'
-import { useDispatch, useSelector } from 'react-redux/es/exports'
+import { useDispatch } from 'react-redux/es/exports'
 
 export const DummyProd = ({data}) => {
     const dispatch = useDispatch()
@@ -9,7 +9,6 @@ export const DummyProd = ({data}) => {
             type:"ADD_TO_CART",
             payload: data
         })
-        console.log(data);
     }
 
     return( 

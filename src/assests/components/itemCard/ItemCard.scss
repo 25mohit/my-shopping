@@ -80,9 +80,9 @@
         padding: 10px 0 10px 15px;
         text-align: left;
         #add-cart-bt{
-            border: none;
-            background-color: rgb(57, 57, 57);
             color: white;
+            background-color: rgb(57, 57, 57);
+            border: none;
             padding: 5px 15px;
             font-size: 16px;
             border-radius: 5px;
@@ -95,6 +95,14 @@
             color: white;
             font-weight: bold;
             background-color: red;
+            border: none;
+            padding: 5px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 }

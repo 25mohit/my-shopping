@@ -30,7 +30,7 @@
 }
 
 .product-table table tr :nth-child(6) {
-  width: 15%;
+  width: 10%;
 }
 
 .product-table table tr th {
@@ -42,8 +42,6 @@
 }
 
 .product-table table .map-tr {
-  margin: 2px;
-  text-align: left;
   border-bottom: 1px solid #dcdddf;
 }
 
@@ -65,22 +63,9 @@
 .product-table table .map-tr td {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 0;
   background-color: white;
   font-weight: normal;
   font-size: 17px;
   text-align: left;
-}
-
-.product-table table .map-tr td #icons-div {
-  margin-left: 20px;
-}
-
-.product-table table .map-tr td #icons-div .tb-dl-ic {
-  color: rebeccapurple;
-}
-
-.product-table table .map-tr td #icons-div .tb-dl-ic:hover {
-  cursor: pointer;
 }
 /*# sourceMappingURL=ProductTable.css.map */

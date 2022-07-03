@@ -54,25 +54,25 @@ export const ProductsTable = () => {
                             </select>}
                             </td>
                         <td>{ product.pQty }</td>
-                        <td><span >{ product.pPrice }</span>
-                        <span id='icons-div'>
-                            <FaRegEdit  className='tb-dl-ic' onClick={() => { updateProduct(
-                            product.id, 
-                            product.pTitle, 
-                            product.pDescription,
-                            product.pSizes,
-                            product.pQty,
-                            product.pPrice
-                            )}}/>
-                            <BsFillTrashFill className='tb-dl-ic' onClick={() => {
-                                func(product.id, 
-                                product.pTitle, 
-                                product.pDescription,
-                                product.pSize,
-                                product.pQty,
-                                product.pPrice
-                                )}}/>
-                        </span>
+                        <td>{ product.pPrice }
+                                <span id='icons-div'>
+                                    <FaRegEdit  className='tb-dl-ic' onClick={() => { updateProduct(
+                                    product.id, 
+                                    product.pTitle, 
+                                    product.pDescription,
+                                    product.pSizes,
+                                    product.pQty,
+                                    product.pPrice
+                                    )}}/>
+                                    <BsFillTrashFill className='tb-dl-ic' onClick={() => {
+                                        func(product.id, 
+                                        product.pTitle, 
+                                        product.pDescription,
+                                        product.pSize,
+                                        product.pQty,
+                                        product.pPrice
+                                        )}}/>
+                                </span>
                             </td>
                     </tr>
                     )}

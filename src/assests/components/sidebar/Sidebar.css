@@ -28,6 +28,11 @@
   text-align: left;
 }
 
+.sidebar .sidebar-items a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
 .sidebar .sidebar-items:hover {
   cursor: pointer;
 }

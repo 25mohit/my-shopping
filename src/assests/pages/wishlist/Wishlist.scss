@@ -1,0 +1,99 @@
+.wishlist{
+        .wish-heading{
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            box-sizing: border-box;
+            .wish-head{
+
+            }
+            .clear-wish{
+                border: 2px solid red;
+                border-radius: 10px;
+                padding: 9px 15px;
+                background-color: red;
+                color: white;
+                font-weight: bold;
+                &:hover{
+                    cursor: pointer;
+                    background-color: white;
+                    color: red;
+                    transition: 0.6s;
+                }
+            }
+        }
+        #wish-map{
+            padding: 10px 20px;
+            box-sizing: border-box;
+            #wish-card{
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                box-sizing: border-box;
+                background-color: white;
+                border-radius: 10px;
+                margin: 15px 0;
+                font-size: 18px;
+                #wish-img{
+                        width: 100px;
+                }   
+                #wish-title{
+                    color: rgb(49, 49, 49);
+                    font-weight: bold;
+                    margin: 0 20px;
+                }
+                #wish-des{
+                    color: rgb(49, 49, 49);
+                    margin: 0 20px;
+                }
+                #wish-qty{
+                    margin: 0 5px;
+                    margin-left: 25px;
+                    color: rgb(49, 49, 49);
+                }
+                #qty-input-field{
+                    text-align: center;
+                    width: 30px;
+                }
+                #wish-price{
+                    color: red;
+                    margin: 0 20px;
+                    font-weight: bold;
+                }
+                .wish-btns-div{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        border-radius: 5px;
+                        padding: 5px 12px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 15px;
+                        margin: 0 15px;
+                        &:hover{
+                            cursor: pointer;
+                            transition: 0.6s;
+                        }
+                    }
+                        .wish-addto-cart{
+                            background-color: rgb(40, 192, 40);
+                            border: 2px solid rgb(40, 192, 40);
+                            &:hover{
+                                background-color: white;
+                                color: rgb(40, 192, 40);
+                            }
+                        }
+                        .wish-clear{
+                            background-color: red;
+                            border: 2px solid red;
+                            &:hover{
+                                background-color: white;
+                                color: red;
+                            }
+                        }
+                }
+            }
+        }
+}

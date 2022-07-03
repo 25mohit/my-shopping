@@ -25,7 +25,6 @@ export const ItemCard = ({ data }) => {
 
     
     // TO RANDOMELY CHOOSING PRODUCT IMAGES
-
     var ranImg = undefined;
         if(data.pCategory=='mobiles , computers'){
             ranImg= one
@@ -65,7 +64,10 @@ export const ItemCard = ({ data }) => {
     const addToWidhlist = () => {
         dispatch({
             type:"ADD_TO_WISHLIST",
-            payload: data
+            payload: {
+                data,
+                ranImg
+                }
         })
     }
     const removeFromCart = (id) => {
@@ -81,8 +83,6 @@ export const ItemCard = ({ data }) => {
         que.push(i+1)
     }
     
-    
-
     return(
         <div className="item-card">
             <div className="img-div" onClick={() => {navigate('/product/'+ data.id )}}>
