@@ -54,21 +54,23 @@ export const ItemCard = ({ data }) => {
             ranImg= four
         }
 
-    const addToCart = () => {
+    const addToCart = (data) => {
         dispatch({
             type:"ADD_TO_CART",
             payload: data
         })
+        console.log(data);
     }
 
-    const addToWidhlist = () => {
+    const addToWidhlist = (id) => {
         dispatch({
             type:"ADD_TO_WISHLIST",
             payload: {
                 data,
-                ranImg
-                }
+                ranImg,
+                id }
         })
+        console.log(data, id);
     }
     const removeFromCart = (id) => {
             dispatch({
@@ -97,7 +99,7 @@ export const ItemCard = ({ data }) => {
                                     <p className="item-price">₹ { data.pPrice }</p>
                             </div>
                             <div className="right">
-                                        <BsSuitHeartFill id='heart-icon' onClick={ addToWidhlist }/>
+                                        <BsSuitHeartFill id='heart-icon' onClick={ () =>addToWidhlist(data.id) }/>
                             </div>
                     </div>
                 <div className="items-select-menu">
@@ -118,7 +120,7 @@ export const ItemCard = ({ data }) => {
                     cart.some(p => p.id===data.id)?(
                         <button id='remove-cart-bt' onClick={ () =>removeFromCart(data.id) }>Remove</button>
                     ):(
-                        <button onClick={ addToCart } id='add-cart-bt'>Cart</button>
+                        <button onClick={ () =>addToCart(data) } id='add-cart-bt'>Cart</button>
                     )
                 }
             </div>

@@ -2,4 +2,11 @@
     font-size: 20px;
     color: green;
     font-weight: bold;
+    .cart-item-map{
+        display: flex;
+        background-color: white;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
 }
