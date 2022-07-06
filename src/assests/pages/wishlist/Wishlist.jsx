@@ -18,9 +18,6 @@ const clearWish = () => {
     dispatch({ 
         type:"CLEAR_WISHLIST"
     })
-    dispatch({
-        type:"CLEAR_CART"
-    })
 }
 
 const removeItem = (id) => {
