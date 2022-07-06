@@ -6,6 +6,8 @@ export  const Cart = () => {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
 
+    // console.log(cart);
+
     const [total, setTotal] = useState()
     useEffect(() => {
         setTotal(cart.reduce((acc, curr) => acc+ Number(curr.pPrice)
@@ -26,12 +28,15 @@ export  const Cart = () => {
             {cart.map(item =><div key={item.id} className='cart-item-map'> <p className="product-n">{ item.pTitle }</p>
                         <p className="product-n">{ item.pPrice }</p>
                         <p className="product-n">{ item.pDescription }</p>
-                    {/* <button onClick={() => removeItem( item.data.id )}>Remove</button> */}
-                    <button onClick={() => removeItem( item.id )}>Remove 2</button></div>
+                    <button onClick={() => removeItem( item.data.id)}>Remove</button>
+                    {/* <button onClick={() => removeItem( item.id )}>Remove 2</button></div> */}
+            </div>
                     )}
             <div className="total-div">
                 <p>Cart Length : ({ cart.length }) {total}</p>
             </div>
         </div>
-    )
-}
+)
+    }
+
+    

@@ -13,25 +13,18 @@ import { Sidebar } from './assests/components/sidebar/Sidebar';
 import { ProductPage } from './assests/pages/productPage/ProductPage';
 import { Seller } from './assests/pages/seller/Seller';
 import { Message } from './assests/components/message/Message';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   const [showMessage, setShowMessage] = useState(false)
   const [toogleSidebar, setToogleSidebar] = useState('show')
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-            setShowMessage(true)
-              clearInterval(interval)
-    },1000)
-},[])
 
   return (
     <div className="App">
         <Router>
           <Header setToogleSidebar={setToogleSidebar} toogleSidebar={ toogleSidebar }/>
-      <div className='main'>
-      <div className={ toogleSidebar }>
+          <div className='main'>
+          <div className={ toogleSidebar }>
           <Sidebar />
       </div>
       <div className='other'>

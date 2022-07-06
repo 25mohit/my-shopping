@@ -7,6 +7,7 @@ const initialState = {
     seller:'',
     deleteProducts:[]
 }
+
 const reducer = (state= initialState, action) => {
     switch(action.type){
         case "SELL_PRODUCT":

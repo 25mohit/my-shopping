@@ -8,6 +8,7 @@ import {GoThreeBars} from 'react-icons/go'
 import { useDispatch } from 'react-redux'
 
 export const Header = ({setToogleSidebar, toogleSidebar}) => {
+    
     const cart = useSelector(state => state.cart)
     const wishlist = useSelector(state => state.wishlist)
 

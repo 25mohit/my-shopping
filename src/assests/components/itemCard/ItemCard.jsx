@@ -20,6 +20,7 @@ export const ItemCard = ({ data }) => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    
     const cart = useSelector(state => state.cart)
     const sellerProfile = useSelector(state => state.seller)
 

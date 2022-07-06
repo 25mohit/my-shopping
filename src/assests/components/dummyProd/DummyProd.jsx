@@ -18,6 +18,7 @@ export const DummyProd = ({data}) => {
                             <p className="prod-ti">{data.pTitle}</p>
                             <p className="prod-de">{data.pDescription}</p>
                             <p className="prod-pri">₹ {data.pPrice}</p>
+                            <p className="prod-pri">₹ {data.id}</p>
                             <div className="item-foot">
                                     <select name="" id="item-se">
                                     {data.pSizes.map((size,i)=><option key={i} value={size}>{size}</option>)}
