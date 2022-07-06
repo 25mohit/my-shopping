@@ -3,8 +3,6 @@ import './Message.css'
 
 export const Message = ({setShowMessage}) => {
 
-   
-
     return(
         <div className="message-div">
                 <div className="message-container">

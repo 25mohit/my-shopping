@@ -1,2 +1,12 @@
 
-<img src='https://lh3.googleusercontent.com/O2GhZZFJLPQatv1_0Q6BtS4m0cqVfjmrOI7pYHlrXaNFUrpuU28rjtZusxUTXCB3fPEXzhx2d3vzQdNpAOFn7PzbgQh3Dq1q9nu4OnKatX47KEIlidm9A8tZnIcKTgkqfesGdJ9hWbyI-0Y5Fgbu4fiU0N90Xqln0LKgJtPh8mDVesf-VXlp-zVbOaKCgZQNwdAk-8IyY7e31lhybD47p3lyGxejOOPmZ9ygUpTkQNipC-D_y-AryHIT8l8lEV84_TafLsaM9SuTdl5FBhCuqflbQMnTlMfQ1LfpE8Wto1516-fD0lI3uuN9x4a22BBhabpfbDqqbfGD7EPBTgFzRYqSgmopZE7bicZrhS0rZu8qn88uU-sJMV45Dd8RwLGhd0ifCw1P6Im5BJimUrY1aZCeX1IsStB3Atb_cH_sAn1Gb9TQzgVP1JcQQpJRRzpRxHy_zjDKLRYcKtMPUEvWVDyC5T5gkE8Inx_xUpPEQvFZlSHJpDcTfFPEgq4Ap-x6OYwLeHIgNZtHsVy836F5M7lejAw_tXbDqaILNb_DS-3yJmZbV15oDRSi684aenQ9sA_tA86zRgkJ8Gv-WIe-SV0UhFJ115WIGPraoIl7qYVJ-dytdF3DCLxEpYj8wHPWTlnG7mArwIOFolSirADEZmt-7gtKIhXezG7U2m3rEYh9po4ZpJImqSY7D8IJFXjpMN3t3HN2Es5SNF3EDl3ekl59LOUHFvUNlQvMEOEKyNsD5p6pw3Me_rlxWhcH=w1280-h640-no?authuser=0'>
+<img src='https://i.ibb.co/cLKb8Rq/Repo.png'>
+
+Hello,<h1>I am Mohit Agarwal a Front-end-Developer.</h1>
+<p>This is my Shopping Website Project, which i created using <b>ReactJS</b> a <b>JavaScript</b> Library as well as with Redux for all <b>State Management</b> Functionality.You can Registered and Login, Sell your item, update your Seller Profile, dedicated section for all your listed items, from where you can edit or delete items based on your choice, after deleting item it went to a 'DELETED' section from where you can see all your deleted items.</p></br>
+<h2>Some key Features..</h2>
+<p><b>1. ) </b>Built shopping website management app having functionalities to add, edit, delete items.</p>
+<p><b>2. ) </b>Can send items to wish list as well as to cart.</p>
+<p><b>3. ) </b>Built using ReactJS and Redux.</p>
+<p><b>4. ) </b>Separate profile section to manage all items and user data.</p></br>
+<p>This App is Live on Netlify you can check it out : <b>Link : </b> https://my-shopping-project.netlify.app/</p>
+<h1>Thanks...</h1>

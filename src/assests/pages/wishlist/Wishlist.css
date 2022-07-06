@@ -128,4 +128,10 @@
   background-color: white;
   color: red;
 }
+
+#empty-txt {
+  font-size: 5rem;
+  position: fixed;
+  top: 40%;
+}
 /*# sourceMappingURL=Wishlist.css.map */

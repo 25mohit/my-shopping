@@ -1,40 +1,60 @@
-import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import './Cart.css'
 export  const Cart = () => {
     
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    // console.log(cart);
+        var exGST =(cart.reduce((acc, curr) => acc+ Number(curr.pPrice),0))
+        var gst = Math.round(exGST*18/100)
+        var total = exGST+gst
 
-    const [total, setTotal] = useState()
-    useEffect(() => {
-        setTotal(cart.reduce((acc, curr) => acc+ Number(curr.pPrice)
-        // *curr.pQuantity
-        ,0))
-    },[cart])
-
-    const removeItem = (id) => {
+    const deleteIt = (id) => {
+        console.log(id)
         dispatch({
             type:"REMOVE_FROM_CART",
-            padyload:id
+            payload:id
         })
-        console.log(id);
+    }
+    const clearAll = () => {
+        dispatch({
+            type:"CLEAR_CART"
+        })
+        dispatch({
+            type:"CLEAR_WISHLIST"
+        })
+        navigate('/')
     }
 
     return(
         <div className="cart">
-            {cart.map(item =><div key={item.id} className='cart-item-map'> <p className="product-n">{ item.pTitle }</p>
-                        <p className="product-n">{ item.pPrice }</p>
-                        <p className="product-n">{ item.pDescription }</p>
-                    <button onClick={() => removeItem( item.data.id)}>Remove</button>
-                    {/* <button onClick={() => removeItem( item.id )}>Remove 2</button></div> */}
-            </div>
-                    )}
+              {cart.length>0 ?
+         
+            cart.map(item => <div className='cart-item-map'>
+                <div className="left-side">
+                    <p className="cart-item-name"> {item.pTitle}</p>
+                    <p className="item-desc">{item.pDescription}</p> 
+                    <p className="item-price">₹ {item.pPrice}</p> 
+                    {console.log(item.pPrice)}
+                    <p className="item-qty">{item.pQty}
+                    {console.log(item.pQty)}</p> 
+                </div>
+                <div className="right-side">
+                        <button onClick={() =>{deleteIt(item.id)}} id='remove-bt'>Remove</button></div>
+                </div>)
+         : <h1 id='empty-txt'>Cart is empty... Start adding Products into the Cart ..!</h1>}
+         {cart.length>0 &&
             <div className="total-div">
-                <p>Cart Length : ({ cart.length }) {total}</p>
-            </div>
+                <p id='cart-total-txt'>Cart Length : ({ cart.length }) ₹ <strong>{exGST}</strong></p>
+                <p id='cart-total-txt'>GST 18% : ₹ { gst }</p>
+                <p className="total-value">Total Price : ₹ {total}</p>
+                <div className="cart-footer-bt">
+                        <button id='clear-all-bt' onClick={ clearAll }>Clear All</button>
+                        <button className="checkout-bt">Checkout</button>
+                </div>
+            </div>}
         </div>
 )
     }

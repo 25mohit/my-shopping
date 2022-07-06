@@ -32,6 +32,8 @@ const removeItem = (id) => {
 }
     return(
         <div className="wishlist">
+        { wishlist.length>0 ?
+        <>
             <div className="wish-heading">
                 <h1 className="wish-head">Wishlists</h1>
                 <button className="clear-wish" onClick={ clearWish }>Clear All</button>
@@ -49,7 +51,7 @@ const removeItem = (id) => {
                         <button className="wish-clear" onClick={ () => removeItem(wish.id) }>Clear</button>
                     </div>
                 </div>
-            ) }</div>
+            ) }</div></>: <h1 id='empty-txt'>Wishist is empty... Start adding Products into the Wishlist ..!</h1>}
         </div>
     )
 }

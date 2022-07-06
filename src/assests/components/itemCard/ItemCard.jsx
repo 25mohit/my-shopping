@@ -58,7 +58,8 @@ export const ItemCard = ({ data }) => {
     const addToCart = (data) => {
         dispatch({
             type:"ADD_TO_CART",
-            payload: data
+            payload: 
+                data
         })
         console.log(data);
     }
@@ -69,6 +70,7 @@ export const ItemCard = ({ data }) => {
             payload: {
                 data,
                 ranImg,
+                buyQty,
                 id }
         })
         console.log(data, id);

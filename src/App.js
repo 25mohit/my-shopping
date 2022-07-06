@@ -37,7 +37,7 @@ function App() {
                 <Route path='/seller-profile' exact element={<Seller />} />
             </Routes>
       </div>
-    {showMessage && <Message setShowMessage={ setShowMessage }/>}
+    {/* {showMessage && <Message setShowMessage={ setShowMessage }/>} */}
           </div>
         </Router>
     </div>
